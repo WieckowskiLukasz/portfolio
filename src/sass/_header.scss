@@ -40,7 +40,7 @@
   width: 220px;
   transition: .3s;
   @include breakpointMax(sm){
-    width: 120px;
+    width: 200px;
   }
   &:hover{
     filter: opacity(70%);
@@ -128,13 +128,13 @@
     }        
   }
   &__hamburger{
+    z-index: 2;
     position: absolute;
     top: 0px;
     right: 0px;
     font-size: 25px;
     display: block;
     cursor: pointer;
-    transform: translate(0, -10px);
     &--black{
         color: $nav-link-scrolled;
     }

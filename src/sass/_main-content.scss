@@ -1,19 +1,107 @@
 .background-image{
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100vw;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: bg .8s linear;
-    @keyframes bg {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 100%;
-      }
-    }
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.home{
+	animation: bg .4s linear;
+	@keyframes bg {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 100%;
+		}
+	}
+}
+
+.home-info{
+	z-index: 1;
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	color: white;
+	text-shadow: .5px .5px dimgray;
+	width: 600px;
+	@include breakpointMax(sm){
+    max-width: 100%;
+		top: 10%;
+		left: 0;
+		padding: 15px;
   }
+	&__name{
+		font-size: 3rem;
+		text-align: left;
+		margin-bottom: 10px;
+	}
+	&__about-me{
+		font-size: 1.3rem;
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	&__btn-more-info{
+		padding: 7px;
+		background-color: rgb(105, 65, 250);
+		width: 140px;
+		border-radius: 2px;
+		transition: .3s;
+		cursor: pointer;
+		&:hover{
+			background-color: rgb(133, 100, 255);
+		}
+		a{
+			display: block;
+			font-size: 1.1rem;
+			width: 100%;
+			color: white;
+			font-weight: 500;
+			text-decoration: none;
+			i{
+				margin-left: 5px;
+				transition: .3s;
+			}
+			&:hover{
+				i{
+					transform: translateX(5px);
+				}
+			}
+		}
+  }
+	&__more-info{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__media-links-container{
+		display: flex;
+	}
+	&__media-link{
+		box-sizing: border-box;
+		color: white;
+		text-decoration: none;
+		border-radius: 2px;
+		font-size: 2rem;
+		background-color: rgb(105, 65, 250);
+		margin-left: 10px;
+		padding: 0 5px;
+		width: 40px;
+		cursor: pointer;
+		transition: .3s;
+		&:hover{
+			background-color: rgb(133, 100, 255);
+		}
+	}
+	.cv{
+		font-size: 1.6rem;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
+	}
+}
