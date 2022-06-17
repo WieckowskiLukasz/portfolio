@@ -6,6 +6,7 @@ import Footer from './layouts/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Skills from './pages/Skills';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route exact path='/' element={<Home/>}/>
               <Route path='/o-mnie' element={<About/>}/>
               <Route path='/kontakt' element={<Contact/>}/>
+              <Route path='/skills' element={<Skills/>}/>
               <Route path='*' element={<Home/>}/>
             </Routes>
           </main>

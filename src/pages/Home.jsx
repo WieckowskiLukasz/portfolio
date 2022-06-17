@@ -5,18 +5,18 @@ import home from '../images/backgrounds/home.jpg';
 export default function Home() {
   return (
     <>
-			<div className='home'>
+			<div className='content'>
 				<div 
 					className='background-image'
 					style={{
 						backgroundImage:`url(${home})`,
-						filter: `brightness(90%)`,
+						filter: `brightness(70%)`,
 					}}>
 				</div>
 				<div className='home-info'>
 					<div className='home-info__name'>Łukasz<br></br>Więckowski</div>
 					<div className='home-info__about-me'>
-						Jestem początkującym front-end developerem. Interesuję się tworzeniem aplikacji webowych korzystając z technologii ReactJS i SaaS.
+						Jestem początkującym front-end developerem. Interesuję się tworzeniem aplikacji webowych korzystając z technologii ReactJS i Saas.
 					</div>
 					<div className='home-info__more-info'>
 						<div className='home-info__btn-more-info'><NavLink to='/o-mnie'>Więcej o mnie<i class="las la-angle-double-right"></i></NavLink></div>

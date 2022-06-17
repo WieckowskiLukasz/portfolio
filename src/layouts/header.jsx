@@ -73,6 +73,11 @@ const Header = () =>{
             <li 
               onClick={()=> handleNavLinkClick()} 
               className={navLink}>
+                <NavLink to='/skills'>Umiejętności</NavLink>
+            </li>
+            <li 
+              onClick={()=> handleNavLinkClick()} 
+              className={navLink}>
                 <NavLink to='/kontakt'>Kontakt</NavLink>
             </li>
           </ul>
