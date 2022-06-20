@@ -21,7 +21,7 @@ export default function Skills() {
 							<div className='skills-info__skill-description'><div>Biegła znajomość składni, stosowanie nazewnictwa klas w konwecji BEM.</div></div>
 						</div>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="lab la-css3"></i></div>
+							<div className='skills-info__skill-icon'><i class="lab la-css3-alt"></i></div>
 							<div className='skills-info__skill-name'>CSS3</div>
 							<div className='skills-info__skill-description'>Biegła znajomość składni. Umiejętność tworzenia czytelnych i nowoczesnych interfejsów.</div>
 						</div>
@@ -41,19 +41,24 @@ export default function Skills() {
 							<div className='skills-info__skill-description'>Biegła znajomość składni. Umiejętność pracy w komponentach klasowych i funkcyjnych z wykorzystanie hooków. Znajomość React Router i React Context.</div>
 						</div>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="las la-desktop"></i></div>
+							<div className='skills-info__skill-icon'><i class="las la-mobile"></i></div>
 							<div className='skills-info__skill-name'>RWD</div>
 							<div className='skills-info__skill-description'>Umiejętność tworzenia responsywnych interfejsów z wykorzystaniem Flexboxa, CSS Grid, Media queries lub Bootstrap.</div>
 						</div>
 						<div className='skills-info__skill-item'>
 							<div className='skills-info__skill-icon'><i class="icon icon-bootstrap"></i></div>
 							<div className='skills-info__skill-name'>Bootstrap</div>
-							<div className='skills-info__skill-description'>Umiejętność korzystania z biblioteki i tworzenia responsywnego interfejsu.</div>
+							<div className='skills-info__skill-description'>Umiejętność korzystania z zasobów biblioteki i tworzenia responsywnego interfejsu.</div>
 						</div>
 						<div className='skills-info__skill-item'>
 							<div className='skills-info__skill-icon'><i class="lab la-git"></i></div>
 							<div className='skills-info__skill-name'>GIT</div>
-							<div className='skills-info__skill-description'>Umiejętność tworzenia repozytoriów i commitów. Współpraca z GitHub.</div>
+							<div className='skills-info__skill-description'>Umiejętność tworzenia repozytoriów i commitów. Współpraca z GitHub. </div>
+						</div>
+						<div className='skills-info__skill-item'>
+							<div className='skills-info__skill-icon'><i class="icon icon-visualstudiocode"></i></div>
+							<div className='skills-info__skill-name'>Visual Studio Code</div>
+							<div className='skills-info__skill-description'>Znajomość środowiska Visual Studio Code.</div>
 						</div>
 					</div>
 					<div className='skills-info__header'><i class="las la-code"></i> Znajomość podstaw</div>

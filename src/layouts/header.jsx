@@ -56,7 +56,7 @@ const Header = () =>{
     <div className={header}>
       <div className='header__content'>
       <div>
-          <NavLink to='/'><img src={logoSrc} alt='logo' className='logo'></img></NavLink>
+          <NavLink to='/'><img src={whiteLogo} alt='logo' className='logo'></img></NavLink>
         </div>
         <nav className='navigation'>
           <ul className={menuSwitch}>
