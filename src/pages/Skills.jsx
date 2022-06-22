@@ -1,5 +1,5 @@
 import React from 'react'
-import about from '../images/backgrounds/abstract14.jpg';
+import about from '../images/backgrounds/abstract14.png';
 
 export default function Skills() {
   return (
@@ -9,81 +9,107 @@ export default function Skills() {
 					className='background-image'
 					style={{
 						backgroundImage:`url(${about})`,
-						filter: `brightness(90%)`,
+						filter: `brightness(30%)`,
 					}}>
 				</div>
 				<div className='skills-info'>
 					<div className='skills-info__header'>Umiejętności</div>
 					<div className='skills-info__skills-container'>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="lab la-html5"></i></div>
-							<div className='skills-info__skill-name'>HTML5</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon lab la-html5'></i>
+								<div className='skills-info__skill-name'>HTML5</div>
+							</div>
 							<div className='skills-info__skill-description'><div>Biegła znajomość składni, stosowanie nazewnictwa klas w konwecji BEM.</div></div>
 						</div>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="lab la-css3-alt"></i></div>
-							<div className='skills-info__skill-name'>CSS3</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon lab la-css3-alt'></i>
+								<div className='skills-info__skill-name'>CSS3</div>
+							</div>
 							<div className='skills-info__skill-description'>Biegła znajomość składni. Umiejętność tworzenia czytelnych i nowoczesnych interfejsów.</div>
 						</div>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="lab la-sass"></i></div>
-							<div className='skills-info__skill-name'>Sass</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon lab la-sass'></i>
+								<div className='skills-info__skill-name'>Sass</div>
+							</div>
 							<div className='skills-info__skill-description'>Stosowanie zagnieżdżeń z nazewnictwem w konwecji BEM. Korzystanie ze zmiennych, domieszek i breakpointów Media Queries.</div>
 						</div>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="lab la-js-square"></i></div>
-							<div className='skills-info__skill-name'>JavaScript</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon lab la-js-square'></i>
+								<div className='skills-info__skill-name'>JavaScript</div>
+							</div>
 							<div className='skills-info__skill-description'>Znajomość składni ES6. Umiejętność tworzenia skryptów zorientowanych obiektowo i korzystania z Rest API.</div>
 						</div>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="lab la-react"></i></div>
-							<div className='skills-info__skill-name'>ReactJS</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon lab la-react'></i>
+								<div className='skills-info__skill-name'>ReactJS</div>
+							</div>
 							<div className='skills-info__skill-description'>Biegła znajomość składni. Umiejętność pracy w komponentach klasowych i funkcyjnych z wykorzystanie hooków. Znajomość React Router i React Context.</div>
 						</div>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="las la-mobile"></i></div>
-							<div className='skills-info__skill-name'>RWD</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon las la-mobile'></i>
+								<div className='skills-info__skill-name'>RWD</div>
+							</div>
 							<div className='skills-info__skill-description'>Umiejętność tworzenia responsywnych interfejsów z wykorzystaniem Flexboxa, CSS Grid, Media queries lub Bootstrap.</div>
 						</div>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="icon icon-bootstrap"></i></div>
-							<div className='skills-info__skill-name'>Bootstrap</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon icon icon-bootstrap'></i>
+								<div className='skills-info__skill-name'>Bootstrap</div>
+							</div>
 							<div className='skills-info__skill-description'>Umiejętność korzystania z zasobów biblioteki i tworzenia responsywnego interfejsu.</div>
 						</div>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="lab la-git"></i></div>
-							<div className='skills-info__skill-name'>GIT</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon lab la-git'></i>
+								<div className='skills-info__skill-name'>GIT</div>
+							</div>
 							<div className='skills-info__skill-description'>Umiejętność tworzenia repozytoriów i commitów. Współpraca z GitHub. </div>
 						</div>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="icon icon-visualstudiocode"></i></div>
-							<div className='skills-info__skill-name'>VSC</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon icon icon-visualstudiocode'></i>
+								<div className='skills-info__skill-name'>VSC</div>
+							</div>
 							<div className='skills-info__skill-description'>Znajomość środowiska Visual Studio Code.</div>
 						</div>
 					</div>
 					<div className='skills-info__header'>Znajomość podstaw</div>
 					<div className='skills-info__skills-container'>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="lab la-php"></i></div>
-							<div className='skills-info__skill-name'>PHP</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon lab la-php'></i>
+								<div className='skills-info__skill-name'>PHP</div>
+							</div>
 							<div className='skills-info__skill-description'>Umiejętność obsługi i walidacji formularzy, korzystania z metod POST, GET i sesji. Praca z bazą danych MySQL.</div>
 						</div>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="icon icon-mysql"></i></div>
-							<div className='skills-info__skill-name'>MySQL</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon icon icon-mysql'></i>
+								<div className='skills-info__skill-name'>MySQL</div>
+							</div>
 							<div className='skills-info__skill-description'>Znajomość podstaw i środowiska phpMyAdmin. Umiejętność tworzenia i modyfikowania prostych baz danych.</div>
 						</div>
 					</div>
 					<div className='skills-info__header'>Zamierzam poznać</div>
 					<div className='skills-info__skills-container'>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="icon icon-typescript"></i></div>
-							<div className='skills-info__skill-name'>TypeScript</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon icon icon-typescript'></i>
+								<div className='skills-info__skill-name'>TypeScript</div>
+							</div>
 							<div className='skills-info__skill-description'>W związku z rosnącą popularnością połączenia React i TypeScript i możliwości z tym związanym zamierzam poznać TypeScript.</div>
 						</div>
 						<div className='skills-info__skill-item'>
-							<div className='skills-info__skill-icon'><i class="lab la-node-js"></i></div>
-							<div className='skills-info__skill-name'>NodeJS</div>
+							<div className='skills-info__skill-name-container'>
+								<i class='skills-info__skill-icon lab la-node-js'></i>
+								<div className='skills-info__skill-name'>NodeJS</div>
+							</div>
 							<div className='skills-info__skill-description'>W przyszłości jestem zainteresowany pracą w podejściu Full-Stack, dlatego zamierzam poznać NodeJS.</div>
 						</div>
 					</div>

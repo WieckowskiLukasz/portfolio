@@ -1,7 +1,7 @@
 
 import React, { useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
-import home from '../images/backgrounds/abstract15.jpg';
+import home from '../images/backgrounds/abstract14.png';
 import validator from 'validator';
 
 export default function Contact(){
@@ -92,17 +92,28 @@ export default function Contact(){
         className='background-image'
         style={{
           backgroundImage:`url(${home})`,
-          filter: `brightness(80%)`,
+          filter: `brightness(30%)`,
         }}>
 			</div>
       <div className='contact'>
         <div className='contact__header'>Kontakt</div>
-        <div className='contact__info'>
-          <a href='https://www.linkedin.com/in/WieckowskiLukasz' target='_blank' rel='noreferrer'><i class="lab la-linkedin-in"></i>linkedin.com/in/WieckowskiLukasz</a>
-          <a href='mailto:lukasz.wieckowski.inf@gmail.com'><i class="las la-at"></i>lukasz.wieckowski.inf@gmail.com</a>
-          <a href="tel:+48515581719"><i class="las la-phone"></i>515-581-719</a>
+        <div className='contact__info-container'>
+          <div className='contact__info'>
+            <a 
+              className='link'
+              href='https://www.linkedin.com/in/WieckowskiLukasz' 
+              target='_blank' 
+              rel='noreferrer'
+            >
+              <i class="lab la-linkedin-in"></i>
+              linkedin.com/in/WieckowskiLukasz
+            </a>
+            <a className='link' href='mailto:lukasz.wieckowski.inf@gmail.com'><i class="las la-at"></i>lukasz.wieckowski.inf@gmail.com</a>
+            <a className='link' href="tel:+48515581719"><i class="las la-phone"></i>515-581-719</a>
+          </div>
         </div>
         <div className='contact__header'>Formularz kontaktowy</div>
+        <div className='contact__form-container'>
           <form className='contact__form' noValidate ref={form} onSubmit={handleForm}>
             <label className={titleLabel}>
               Tytuł {titleError}
@@ -136,12 +147,14 @@ export default function Contact(){
               value={message} 
               onChange={handleMessage}
             />
-            <input 
-              className='contact__form-submit' 
+            <button 
+              className='contact__form-submit btn' 
               type='submit' 
-              value='Wyślij'
-            />
+            >
+              Wyślij
+              <i class="las la-paper-plane"></i></button>
           </form>
+        </div>
       </div>
     </div>
   );

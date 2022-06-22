@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import home from '../images/backgrounds/home.jpg';
+import home from '../images/backgrounds/home2.jpg';
 import photography from '../images/photography/photography.jpg';
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
 					className='background-image'
 					style={{
 						backgroundImage:`url(${home})`,
-						filter: `brightness(80%)`,
+						filter: `brightness(70%)`,
 					}}>
 				</div>
 				<div className='home-info'>
