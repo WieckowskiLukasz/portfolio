@@ -1,7 +1,7 @@
 
 import React, { useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
-import home from '../images/backgrounds/skills.jpg';
+import home from '../images/backgrounds/abstract15.jpg';
 import validator from 'validator';
 
 export default function Contact(){
@@ -61,8 +61,6 @@ export default function Contact(){
   const messageLabel = (formConfirmed && !messageValid) ?
     'contact__form-label contact__form-label--error'
     : 'contact__form-label';
-
-
   const titleInput = (formConfirmed && !titleValid) ?
     'contact__form-input contact__form-input--error'
     : (formConfirmed && titleValid) ?
@@ -94,13 +92,13 @@ export default function Contact(){
         className='background-image'
         style={{
           backgroundImage:`url(${home})`,
-          filter: `brightness(30%)`,
+          filter: `brightness(80%)`,
         }}>
 			</div>
       <div className='contact'>
         <div className='contact__header'>Kontakt</div>
         <div className='contact__info'>
-          <a href='https://www.linkedin.com/in/WieckowskiLukasz' target='_blank'><i class="lab la-linkedin-in"></i>linkedin.com/in/WieckowskiLukasz</a>
+          <a href='https://www.linkedin.com/in/WieckowskiLukasz' target='_blank' rel='noreferrer'><i class="lab la-linkedin-in"></i>linkedin.com/in/WieckowskiLukasz</a>
           <a href='mailto:lukasz.wieckowski.inf@gmail.com'><i class="las la-at"></i>lukasz.wieckowski.inf@gmail.com</a>
           <a href="tel:+48515581719"><i class="las la-phone"></i>515-581-719</a>
         </div>

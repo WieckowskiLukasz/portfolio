@@ -1,5 +1,5 @@
 import React from 'react'
-import home from '../images/backgrounds/skills3.jpg';
+import about from '../images/backgrounds/abstract14.jpg';
 
 export default function Skills() {
   return (
@@ -8,12 +8,12 @@ export default function Skills() {
 				<div 
 					className='background-image'
 					style={{
-						backgroundImage:`url(${home})`,
-						filter: `brightness(30%)`,
+						backgroundImage:`url(${about})`,
+						filter: `brightness(90%)`,
 					}}>
 				</div>
 				<div className='skills-info'>
-					<div className='skills-info__header'><i class="las la-code"></i>Umiejętności</div>
+					<div className='skills-info__header'>Umiejętności</div>
 					<div className='skills-info__skills-container'>
 						<div className='skills-info__skill-item'>
 							<div className='skills-info__skill-icon'><i class="lab la-html5"></i></div>
@@ -57,34 +57,30 @@ export default function Skills() {
 						</div>
 						<div className='skills-info__skill-item'>
 							<div className='skills-info__skill-icon'><i class="icon icon-visualstudiocode"></i></div>
-							<div className='skills-info__skill-name'>Visual Studio Code</div>
+							<div className='skills-info__skill-name'>VSC</div>
 							<div className='skills-info__skill-description'>Znajomość środowiska Visual Studio Code.</div>
 						</div>
 					</div>
-					<div className='skills-info__header'><i class="las la-code"></i> Znajomość podstaw</div>
+					<div className='skills-info__header'>Znajomość podstaw</div>
 					<div className='skills-info__skills-container'>
 						<div className='skills-info__skill-item'>
 							<div className='skills-info__skill-icon'><i class="lab la-php"></i></div>
 							<div className='skills-info__skill-name'>PHP</div>
 							<div className='skills-info__skill-description'>Umiejętność obsługi i walidacji formularzy, korzystania z metod POST, GET i sesji. Praca z bazą danych MySQL.</div>
 						</div>
-					</div>
-					<div className='skills-info__skills-container'>
 						<div className='skills-info__skill-item'>
 							<div className='skills-info__skill-icon'><i class="icon icon-mysql"></i></div>
 							<div className='skills-info__skill-name'>MySQL</div>
 							<div className='skills-info__skill-description'>Znajomość podstaw i środowiska phpMyAdmin. Umiejętność tworzenia i modyfikowania prostych baz danych.</div>
 						</div>
 					</div>
-					<div className='skills-info__header'><i class="las la-code"></i> Zamierzam poznać</div>
+					<div className='skills-info__header'>Zamierzam poznać</div>
 					<div className='skills-info__skills-container'>
 						<div className='skills-info__skill-item'>
 							<div className='skills-info__skill-icon'><i class="icon icon-typescript"></i></div>
 							<div className='skills-info__skill-name'>TypeScript</div>
 							<div className='skills-info__skill-description'>W związku z rosnącą popularnością połączenia React i TypeScript i możliwości z tym związanym zamierzam poznać TypeScript.</div>
 						</div>
-					</div>
-					<div className='skills-info__skills-container'>
 						<div className='skills-info__skill-item'>
 							<div className='skills-info__skill-icon'><i class="lab la-node-js"></i></div>
 							<div className='skills-info__skill-name'>NodeJS</div>
