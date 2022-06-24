@@ -26,19 +26,22 @@ export default function About() {
                   <a 
                     href='https://www.linkedin.com/in/WieckowskiLukasz' 
                     target='_blank' 
-                    rel='noreferrer' className='home-info__media-link'>
+                    rel='noreferrer' 
+                    className='about__media-link'>
                       <i class="lab la-linkedin-in"></i>
                   </a>
                   <a 
                     href='https://www.facebook.com/IWieckowskiLukasz' 
                     target='_blank' 
-                    rel='noreferrer' className='home-info__media-link'>
+                    rel='noreferrer' 
+                    className='about__media-link'>
                       <i class="lab la-facebook-f"></i>
                   </a>
                   <a 
                     href='https://github.com/WieckowskiLukasz' 
                     target='_blank' 
-                    rel='noreferrer' className='home-info__media-link'>
+                    rel='noreferrer' 
+                    className='about__media-link'>
                       <i class="lab la-github"></i>
                   </a>
                 </div>

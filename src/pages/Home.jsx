@@ -17,7 +17,7 @@ export default function Home() {
 				<div className='home-info'>
 					<div className='home-info__name-container'>
 						<div className='home-info__picture'><img alt='photography' src={photography}/></div>
-						<div className='home-info__name'>Łukasz<br></br>Więckowski</div>
+						<div className='home-info__name'><p>Łukasz</p><p>Więckowski</p></div>
 					</div>
 					<div className='home-info__about-me'>
 						Jestem początkującym programistą front-end. Interesuję się tworzeniem nowoczesnych interfejsów i wykonywaniem aplikacji webowych korzystając z technologii ReactJS i Saas.
@@ -32,19 +32,22 @@ export default function Home() {
 						<a 
 							href='https://www.linkedin.com/in/WieckowskiLukasz' 
 							target='_blank' 
-							rel='noreferrer' className='home-info__media-link'>
+							rel='noreferrer' 
+							className='home-info__media-link'>
 								<i class="lab la-linkedin-in"></i>
 						</a>
 						<a 
 							href='https://www.facebook.com/IWieckowskiLukasz' 
 							target='_blank' 
-							rel='noreferrer' className='home-info__media-link'>
+							rel='noreferrer' 
+							className='home-info__media-link'>
 								<i class="lab la-facebook-f"></i>
 						</a>
 						<a 
 							href='https://github.com/WieckowskiLukasz' 
 							target='_blank' 
-							rel='noreferrer' className='home-info__media-link'>
+							rel='noreferrer' 
+							className='home-info__media-link'>
 								<i class="lab la-github"></i>
 						</a>
 						<a 

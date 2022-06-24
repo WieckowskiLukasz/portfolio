@@ -12,7 +12,7 @@
 .btn{
 	padding: 10px;
 	border-radius: 2px;
-	background-color: rgb(105, 65, 250);
+	background-color: $btn-bgc;
 	transition: .3s;
 	text-decoration: none;
 	cursor: pointer;
@@ -23,20 +23,29 @@
 	color: white;
 	text-transform: uppercase;
 	&:hover{
-		background-color: rgb(133, 100, 255);
+		background-color: $btn-bgc-hover;
 	}
 }
 
 .link{
 	cursor: pointer;
+	word-break: break-all;
 	transition: .3s;
+	text-align: left;
+	@include breakpointMax(xxs){
+    font-size: 1.1rem;
+  }
+	@include breakpointMax(xxxs){
+    font-size: .9rem;
+  }
 	&:hover{
-		color: rgb(175, 153, 255);
+		color: $link-color-hover;
 	}
 }
 
 .content{
 	width: 100%;
+	max-width: 2500px;
 	height: 100%;
 	position: relative;
 	display: flex;
@@ -57,59 +66,117 @@
 	position: absolute;
 	top: 25%;
 	left: 10%;
-	color: white;
-	text-shadow: .5px .5px dimgray;
+	color: $font-color;
+	text-shadow: $text-shadow;
 	width: 600px;
-	@include breakpointMax(sm){
-    max-width: 100%;
+	background-color: $about-me-bgc-color;
+	padding: 15px;
+	@include breakpointMax(md){
+    width: 80%;
 		top: 10%;
-		left: 0;
+		margin: auto;
 		padding: 15px;
+  }
+	@include breakpointMax(xs){
+		padding: 15px;
+    width: 100%;
+		left: 0;
+  }
+	@include breakpointMax(xxs){
+		top: 5%;
   }
 	&__name-container{
 		display: flex;
+		margin-bottom: 10px;
+		@include breakpointMax(xxxs){
+			flex-direction: column;
+		}
 	}
 	&__picture{
+		margin-right: 15px;
 		img{
 			width: 150px;
 			border-radius: 4px;
 			filter: brightness(95%);
+			@include breakpointMax(sm){
+				width: 140px;
+			}
+			@include breakpointMax(sm){
+				width: 130px;
+			}
 		}
-		margin-right: 15px;
+		@include breakpointMax(xxxs){
+			margin: 0;
+		}
 	}
 	&__name{
-		font-size: 3.6rem;
+		display: flex;
+		min-height: 100%;
+		flex-direction: column;
+		justify-content: space-around;
+		font-size: 3.2rem;
 		text-align: left;
-		margin-bottom: 10px;
+		text-transform: uppercase;
+		@include breakpointMax(sm){
+			font-size: 2.8rem;
+		}
+		@include breakpointMax(sm){
+			font-size: 2.6rem;
+		}
+		@include breakpointMax(sm){
+			font-size: 2.4rem;
+		}
+		@include breakpointMax(xxs){
+			font-size: 2.2rem;
+		}
+		@include breakpointMax(320px){
+			font-size: 1.8rem;
+		}
+		@include breakpointMax(xxxs){
+			margin-top: 5px;
+			flex-direction: row;
+		}
 	}
 	&__about-me{
 		text-align: justify;
 		font-size: 1.3rem;
 		margin-bottom: 20px;
+		@include breakpointMax(xs){
+			font-size: 1.2rem;
+		}
 	}
 	&__btn-more-info{
 		display: flex;
 		align-items: center;
 		letter-spacing: 1px;
 		padding: 7px;
-		background-color: rgb(105, 65, 250);
+		background-color: $btn-bgc;
 		width: 160px;
 		border-radius: 2px;
 		transition: .3s;
 		text-shadow: none;
 		letter-spacing: 1px;
 		cursor: pointer;
+		@include breakpointMax(xs){
+			width: 140px;
+		}
 		&:hover{
-			background-color: rgb(133, 100, 255);
+			background-color: $btn-bgc-hover;
 		}
 		a{
 			display: block;
 			font-size: 1rem;
 			width: 100%;
-			color: white;
+			color: $font-color;
 			font-weight: 500;
 			text-decoration: none;
 			text-transform: uppercase;
+			@include breakpointMax(xs){
+				font-size: .9rem;
+			}
+			@include breakpointMax(xxs){
+				font-size: .85rem;
+			}
 			i{
 				margin-left: 5px;
 				transition: .3s;
@@ -124,91 +191,63 @@
 	&__more-info{
 		display: flex;
 		justify-content: space-between;
+		@include breakpointMax(xxs){
+			flex-direction: column;
+			align-items: center;
+			height: 90px;
+		}
 	}
 	&__media-links-container{
 		display: flex;
 	}
 	&__media-link{
-		box-sizing: border-box;
-		color: white;
-		text-decoration: none;
-		border-radius: 2px;
-		font-size: 2rem;
-		background-color: rgb(105, 65, 250);
-		margin-left: 10px;
-		padding: 0 5px;
-		width: 40px;
-		cursor: pointer;
-		transition: .3s;
-		&:hover{
-			background-color: rgb(133, 100, 255);
-		}
+		@include media-link;
 	}
 	.cv{
+		margin-right: 0;
 		font-size: 1.6rem;
 		text-align: center;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		font-weight: 500;
+		@include breakpointMax(xs){
+			font-size: 1.4rem;
+		}
 	}
 }
 
 .skills-info{
-	margin-top: 20px;
-	text-shadow: .5px .5px dimgray;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	width: 80%;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-	color: white;
-	font-size: 2.5rem;
-	@include breakpointMax(sm){
-		margin-top: 40px;
-		padding: 0 10px;
-    width: 100%;
-		align-items: flex-start;
-  }
+	@include page-container;
 	&__header{
-		width: 50%;
-		text-transform: uppercase;
-		font-size: 2.5rem;
-		display: flex;
-		justify-content: flex-start;
-		margin-bottom: 40px;
-		padding-bottom: 10px;
-		border-bottom: solid 1px rgba(211, 211, 211, 0.2);
-		i{
-			transform: translateY(6px);
-			margin-right: 10px;
-		}
+		@include content-header;
 	}
 	&__skills-container{
+		@include element-container;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		width: 50%;
-		padding-left: 15px;
-		margin-bottom: 40px;
-		
 	}
 	&__skill-item{
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
 		padding: 20px;
-		background-color: rgba(105, 105, 105, 0.329);
+		background-color: $element-bgc-color;
 		margin-bottom: 10px;
 		width: 100%;
+		@include breakpointMax(sm){
+			flex-direction: column;
+		}
 	}
 	&__skill-name-container{
 		display: flex;
-		border-right: solid 1px rgba(211, 211, 211, 0.2);
+		border-right: $border;
 		height: 100%;
 		padding-top: 5px;
+		@include breakpointMax(sm){
+			border-right: none;
+		}
 	}
 	&__skill-icon{
 		min-width: 40px;
@@ -217,8 +256,8 @@
 		transform: translateY(-8px);
 		&.icon{
 			display: block;
-			font-size: 2rem;
-			transform: translate(0px, -1px);
+			font-size: 1.9rem;
+			transform: translate(0px, -2px);
 		}
 	}
 	&__skill-name{
@@ -233,33 +272,23 @@
 		font-size: 1.2rem;
 		transform: translateY(4px);
 		text-align: justify;
+		@include breakpointMax(sm){
+			align-self: flex-start;
+			border-top: $border;
+			padding: 10px;
+			margin: 0;
+			width: 100%;
+		}
 	}
 }
 
 .contact{
-	margin-top: 20px;
-	color: white;
-	z-index: 1;
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
-	width: 80%;
-	align-items: center;
+	@include page-container;
 	&__header{
-		text-transform: uppercase;
-		text-align: left;
-		width: 50%;
-		font-size: 2.5rem;
-		z-index: 1;
-		color: white;
-		padding-bottom: 10px;
-		margin-bottom: 40px;
-		border-bottom: solid 1px rgba(211, 211, 211, 0.2);
+		@include content-header;
 	}
 	&__info-container{
-		padding-left: 15px;
-		width: 50%;
-		margin-bottom: 40px;
+		@include element-container;
 	}
 	&__info{
 		padding: 20px;
@@ -268,7 +297,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		background-color: rgba(105, 105, 105, 0.35);
+		background-color: $element-bgc-color;
 		a{
 			padding: 5px 0;
 			color: white;
@@ -282,8 +311,7 @@
 		}
 	}
 	&__form-container{
-		width: 50%;
-		padding-left: 15px;
+		@include element-container;
 	}
 	&__form{
 		width: 100%;
@@ -292,30 +320,33 @@
 		flex-direction: column;
 		color: white;
 		text-align: left;
-		background-color: rgba(105, 105, 105, 0.35);
+		background-color: $element-bgc-color;
 		textarea{
 			min-height: 200px;
 		}
 	}
 	&__form-label{
 		text-transform: uppercase;
-		font-size: 1.1rem;
-		text-shadow: .5px .5px black;
+		font-size: 1rem;
+		text-shadow: $text-shadow;
 		letter-spacing: 1px;
 		transition: .3s;
 		padding: 15px 0;
 		font-weight: 500;
+		@include breakpointMax(sm){
+			font-size: 1rem;
+		}
 		&--error{
-			color: rgb(236, 131, 113);
+			color: $font-color-error;
 			text-shadow: none;
 		}
 	}
 	&__form-input{
 		max-width: 100%;
-		background-color: rgba(255, 255, 255, 0.2);
+		background-color: $input-bgc-color;
 		border: none;
 		padding: 10px;
-		color: white;
+		color: $font-color;
 		font-size: .9rem;
 		letter-spacing: 1px;
 		transition: .3s;
@@ -330,7 +361,7 @@
 			text-align: left;
 		}
 		&:focus{
-			color: white;
+			color: $font-color;
 			outline: none;
 		}
 	}
@@ -354,47 +385,128 @@
 }
 
 .about{
-	margin-top: 20px;
-	color: white;
-	z-index: 1;
-	display: flex;
+	@include page-container;
 	justify-content: flex-start;
-	flex-direction: column;
-	width: 80%;
-	align-items: center;
-	
 	&__header{
-		text-transform: uppercase;
-		text-align: left;
-		width: 50%;
-		font-size: 2.5rem;
-		color: white;
-		padding-bottom: 5px;
-		border-bottom: solid 1px rgba(211, 211, 211, 0.2);
+		@include content-header;
+		width: 45%;
+		@include breakpointMax(xl){
+			width: 55%;
+		}
+		@include breakpointMax(lg){
+			width: 70%;
+		}
+		@include breakpointMax(md){
+			width: 80%;
+		}
+		@include breakpointMax(sm){
+			padding-left: 20px;
+			width: 100%;
+		}
 	}
 	&__info-container{
-		padding: 20px 0 0 20px;
+		padding-left: 20px;
 		display: flex;
-		width: 50%;
+		width: 45%;
 		margin-bottom: 20px;
+		@include breakpointMax(xl){
+			width: 55%;
+		}
+		@include breakpointMax(lg){
+			width: 70%;
+		}
+		@include breakpointMax(md){
+			width: 80%;
+		}
+		@include breakpointMax(sm){
+			padding: 0;
+			width: 100%;
+		}
+		@include breakpointMax(sm){
+			padding: 20px;
+			width: 100%;
+			flex-direction: column;
+			background-color: $about-me-bgc-color;
+		}
 	}
 	&__info{
 		width: 100%;
 		font-size: 1.2rem;
 		padding-left: 20px;
 		text-align: justify;
+		@include breakpointMax(sm){
+			padding-left: 0;
+			max-width: 100%;
+			flex-direction: column;
+		}
 		p{
+			max-width: 100%;
 			margin-bottom: 10px;
+			@include breakpointMax(sm){
+				text-shadow: $text-shadow;
+			}
 		}
 	}
 	&__photo{
+		display: flex;
+		flex-direction: column;
+		@include breakpointMax(sm){
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-between;
+		}
 		img{
+			border-radius: 2px;
 			width: 230px;
 			filter: brightness(100%);
+			@include breakpointMax(sm){
+				width: 180px;
+				margin-bottom: 20px;
+			}
+			@include breakpointMax(xxs){
+				width: 135px;
+				margin-bottom: 20px;
+			}
+			@include breakpointMax(xxxs){
+				width: 110px;
+			}
 		}
 	}
 	&__media-links{
 		padding: 5px;
+	}
+	&__media-links-header{
+		border-bottom: $border;
+		text-align: left;
+		padding: 5px 0;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		font-size: 1rem;
+		@include breakpointMax(sm){
+			margin-left: 10px;
+			padding: 0 0 5px 0;
+		}
+		@include breakpointMax(xxxs){
+			font-size: .9rem;
+		}
+	}
+	&__media-links-container{
+		display: flex;
+		justify-content: flex-start;
+		@include breakpointMax(xxxs){
+			justify-content: center;
+		}
+	}
+	&__media-link{
+		@include media-link;
+		@include breakpointMax(xxs){
+			margin: 0 4px;
+		}
+		@include breakpointMax(xxxs){
+			margin: 0 4px;
+			font-size: 1.5rem;
+			width: 30px;
+		}
 	}
 	&__button{
 		display: block;
@@ -411,47 +523,20 @@
 			}
 		}
 	}
-	&__media-links-header{
-		border-bottom: solid 1px rgba(211, 211, 211, 0.2);
-		text-align: left;
-		padding: 5px 0;
-		text-transform: uppercase;
-		margin-bottom: 10px;
-	}
-	&__media-links-container{
-		display: flex;
-		justify-content: flex-start;
-	}
 }
 
 .projects{
-	margin-top: 20px;
-	color: white;
-	z-index: 1;
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
-	width: 80%;
-	align-items: center;
-	text-shadow: .5px .5px dimgray;
+	@include page-container;
 	&__header{
-		text-transform: uppercase;
-		text-align: left;
-		width: 50%;
-		font-size: 2.5rem;
-		color: white;
-		padding-bottom: 5px;
-		border-bottom: solid 1px rgba(211, 211, 211, 0.2);
+		@include content-header;
 	}
 	&__container{
-		padding-left: 20px;
-		margin-top: 40px;
-		width: 50%;
+		@include element-container;
 	}
 	&__item{
 		width: 100%;
 		margin-bottom: 60px;
-		background-color: rgba(105, 105, 105, 0.35);
+		background-color: $element-bgc-color;
 	}
 	&__image-container{
 		position: relative;
@@ -466,6 +551,9 @@
 		background-repeat: no-repeat;
 		filter: brightness(40%);
 		transition: .3s;
+		@include breakpointMax(sm){
+			height: 250px;
+		}
 		&:hover{
 			transform: scale(1.1);
 			filter: brightness(100%);
@@ -485,7 +573,11 @@
 		text-transform: uppercase;
 		text-shadow: 1px 1px black;
 		transition: .3s;
-		width: 100%;
+		width: 90%;
+		@include breakpointMax(sm){
+			font-size: 3rem;
+			padding: 0 10px;
+		}
 	}
 	&__info{
 		display: flex;
@@ -508,10 +600,11 @@
 	}
 	&__technologies{
 		padding: 10px 0;
+		text-align: left;
 	}
 	&__link{
 		padding: 10px 0;
-		color: white;
+		color: $font-color;
 		text-decoration: none;
 	}
 }

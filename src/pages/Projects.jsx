@@ -2,6 +2,7 @@ import React from 'react';
 import home from '../images/backgrounds/abstract14.png';
 import gzgk from '../images/pages_content/gzgk.PNG';
 import weatherForecast from '../images/pages_content/weatherForecast.PNG';
+import portfolio from '../images/pages_content/portfolio.PNG';
 
 export default function Projects() {
   return (
@@ -78,7 +79,7 @@ export default function Projects() {
             <div className='projects__item'>
               <div className='projects__image-container'>
                 <div className='projects__image' style={{
-                  backgroundImage:`url(${weatherForecast})`,
+                  backgroundImage:`url(${portfolio})`,
                 }}>
                 </div>
                 <div className='projects__name'>
