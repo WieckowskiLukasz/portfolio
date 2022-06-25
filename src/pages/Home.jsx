@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import home from '../images/backgrounds/home2.jpg';
-import photography from '../images/photography/photography.jpg';
+import home from '../images/backgrounds/home.webp';
+import photography from '../images/photography/photography.webp';
+import cv from '../download/Łukasz_Więckowski_CV.pdf';
 
 export default function Home() {
   return (
@@ -51,8 +52,11 @@ export default function Home() {
 								<i class="lab la-github"></i>
 						</a>
 						<a 
-							href='#' 
-							className='home-info__media-link cv'>
+							href={cv}
+							target='_blank' 
+							rel='noreferrer' 
+							className='home-info__media-link cv'
+							>
 								CV
 						</a>
 						</div>

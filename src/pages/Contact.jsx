@@ -1,7 +1,7 @@
 
 import React, { useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
-import home from '../images/backgrounds/abstract14.png';
+import background from '../images/backgrounds/default_bg.webp';
 import validator from 'validator';
 
 export default function Contact(){
@@ -12,6 +12,8 @@ export default function Contact(){
   const [emailValid, setEmailValid] = useState(false);
   const [messageValid, setMessageValid] = useState(false);
   const [formConfirmed, setFormConfirmed] = useState(false);
+  const [successfulSend, setSuccessfulSend] = useState();
+  const [popUpActive, setPopUpActive] = useState(false);
 
   const form = useRef();
 
@@ -30,11 +32,13 @@ export default function Contact(){
     else setMessageValid(true);
     setMessage(e.target.value);
   };
-  
   const handleForm = (e) =>{
     e.preventDefault();
     setFormConfirmed(true);
-    if(titleValid && emailValid && messageValid) alert("Mail wysłany");
+    if(titleValid && emailValid && messageValid) sendEmail();
+  };
+  const handlePopUpButton = () =>{
+    setPopUpActive(false);
   }
 
   const sendEmail = () => {
@@ -47,9 +51,33 @@ export default function Contact(){
         setEmailValid(false);
         setMessageValid(false);
         setFormConfirmed(false);
+        setPopUpActive(true);
+        setSuccessfulSend(true);
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
+        setPopUpActive(true);
+        setSuccessfulSend(false);
       });
+  };
+
+  const PopUpInfo = () =>{
+    const successfulSendText = <><p>Twoja wiadomości została wysłana.</p><p>Dziękujemy za kontakt!</p></>;
+    const errorSendText = <><p>Niestety nie udało się wysłać wiadomości.</p><p>Zapraszamy w innym terminie</p></>;
+
+    const textValue = successfulSend ? 
+      successfulSendText
+      : errorSendText;
+
+    return(
+      <div className='contact-pop-up'>
+        <div className='contact-pop-up__content'>
+          <div className='contact-pop-up__text'>
+          {textValue}
+          </div>
+          <button onClick={()=> handlePopUpButton()} className='contact-pop-up__button btn'>OK</button>
+        </div>
+      </div>
+    );
   };
 
   const titleLabel = (formConfirmed && !titleValid) ?
@@ -85,16 +113,20 @@ export default function Contact(){
   const messageError = (formConfirmed && !messageValid) ? 
     '- treść wiadomości musi zawierać od 5 do 1500 znaków!'
     : null;
+  const popUpWindow = popUpActive ?
+    <PopUpInfo/>
+    : null;
 
   return (
     <div className='content'>
       <div 
         className='background-image'
         style={{
-          backgroundImage:`url(${home})`,
-          filter: `brightness(30%)`,
+          backgroundImage:`url(${background})`,
+          filter: `brightness(40%)`,
         }}>
 			</div>
+      {popUpWindow}
       <div className='contact'>
         <div className='contact__header'>Kontakt</div>
         <div className='contact__info-container'>
@@ -108,8 +140,12 @@ export default function Contact(){
               <i class="lab la-linkedin-in"></i>
               linkedin.com/in/WieckowskiLukasz
             </a>
-            <a className='link' href='mailto:lukasz.wieckowski.inf@gmail.com'><i class="las la-at"></i>lukasz.wieckowski.inf@gmail.com</a>
-            <a className='link' href="tel:+48515581719"><i class="las la-phone"></i>515-581-719</a>
+            <a className='link' href='mailto:lukasz.wieckowski.inf@gmail.com'>
+              <i class="las la-at"></i>lukasz.wieckowski.inf@gmail.com
+            </a>
+            <a className='link' href="tel:+48515581719">
+              <i class="las la-phone"></i>515-581-719
+            </a>
           </div>
         </div>
         <div className='contact__header'>Formularz kontaktowy</div>

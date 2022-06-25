@@ -11,6 +11,7 @@
 # production
 /build
 /src/testimages
+/src/archiwum
 
 # misc
 .DS_Store

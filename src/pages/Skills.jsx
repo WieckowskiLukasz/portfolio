@@ -1,5 +1,5 @@
-import React from 'react'
-import about from '../images/backgrounds/abstract14.png';
+import React from 'react';
+import background from '../images/backgrounds/default_bg.webp';
 
 export default function Skills() {
   return (
@@ -8,8 +8,8 @@ export default function Skills() {
 				<div 
 					className='background-image'
 					style={{
-						backgroundImage:`url(${about})`,
-						filter: `brightness(30%)`,
+						backgroundImage:`url(${background})`,
+						filter: `brightness(40%)`,
 					}}>
 				</div>
 				<div className='skills-info'>
@@ -27,7 +27,7 @@ export default function Skills() {
 								<i class='skills-info__skill-icon lab la-css3-alt'></i>
 								<div className='skills-info__skill-name'>CSS3</div>
 							</div>
-							<div className='skills-info__skill-description'>Biegła znajomość składni. Umiejętność tworzenia czytelnych i nowoczesnych interfejsów.</div>
+							<div className='skills-info__skill-description'>Biegła znajomość składni. Umiejętność tworzenia czytelnych, responsywnych i nowoczesnych interfejsów.</div>
 						</div>
 						<div className='skills-info__skill-item'>
 							<div className='skills-info__skill-name-container'>
@@ -48,11 +48,11 @@ export default function Skills() {
 								<i class='skills-info__skill-icon lab la-react'></i>
 								<div className='skills-info__skill-name'>ReactJS</div>
 							</div>
-							<div className='skills-info__skill-description'>Biegła znajomość składni. Umiejętność pracy w komponentach klasowych i funkcyjnych z wykorzystanie hooków. Znajomość React Router i React Context.</div>
+							<div className='skills-info__skill-description'>Biegła znajomość składni. Umiejętność pracy z komponentami klasowymi i funkcyjnymi z wykorzystanie hooków. Znajomość React Router i React Context.</div>
 						</div>
 						<div className='skills-info__skill-item'>
 							<div className='skills-info__skill-name-container'>
-								<i class='skills-info__skill-icon las la-mobile'></i>
+								<i class='skills-info__skill-icon las la-laptop-code'></i>
 								<div className='skills-info__skill-name'>RWD</div>
 							</div>
 							<div className='skills-info__skill-description'>Umiejętność tworzenia responsywnych interfejsów z wykorzystaniem Flexboxa, CSS Grid, Media queries lub Bootstrap.</div>
@@ -69,14 +69,14 @@ export default function Skills() {
 								<i class='skills-info__skill-icon lab la-git'></i>
 								<div className='skills-info__skill-name'>GIT</div>
 							</div>
-							<div className='skills-info__skill-description'>Umiejętność tworzenia repozytoriów i commitów. Współpraca z GitHub. </div>
+							<div className='skills-info__skill-description'>Umiejętność tworzenia i aktualizowania repozytoriów. Praca ze zdalnym repozytorium na GitHub. </div>
 						</div>
 						<div className='skills-info__skill-item'>
 							<div className='skills-info__skill-name-container'>
 								<i class='skills-info__skill-icon icon icon-visualstudiocode'></i>
 								<div className='skills-info__skill-name'>VSC</div>
 							</div>
-							<div className='skills-info__skill-description'>Znajomość środowiska Visual Studio Code.</div>
+							<div className='skills-info__skill-description'>Znajomość środowiska Visual Studio Code, praca z Node Package Manager.</div>
 						</div>
 					</div>
 					<div className='skills-info__header'>Znajomość podstaw</div>
@@ -103,7 +103,7 @@ export default function Skills() {
 								<i class='skills-info__skill-icon icon icon-typescript'></i>
 								<div className='skills-info__skill-name'>TypeScript</div>
 							</div>
-							<div className='skills-info__skill-description'>W związku z rosnącą popularnością połączenia React i TypeScript i możliwości z tym związanym zamierzam poznać TypeScript.</div>
+							<div className='skills-info__skill-description'>W związku z rosnącą popularnością połączenia React i TypeScript i możliwości z tym związanych zamierzam poznać TypeScript.</div>
 						</div>
 						<div className='skills-info__skill-item'>
 							<div className='skills-info__skill-name-container'>

@@ -36,12 +36,16 @@
 
 .logo{
   z-index: 2;
-  width: 230px;
+  width: 220px;
   transition: .3s;
   transform: translate(3px, 4px);
   font-weight:900;
   @include breakpointMax(sm){
-    width: 220px;
+    transform: translate(5px, 7px);
+    width: 210px;
+  }
+  @include breakpointMax(xxs){
+    width: 190px;
   }
   &:hover{
     filter: opacity(70%);

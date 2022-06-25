@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import { NavLink } from 'react-router-dom';
-import whiteLogo  from '../images/logo/whiteLogo.svg';
+import logo  from '../images/logo/logo.svg';
 import { useLocation } from 'react-router-dom';
 
 const Header = () =>{
@@ -52,7 +52,7 @@ const Header = () =>{
     <div className={header}>
       <div className='header__content'>
       <div>
-          <NavLink to='/'><img src={whiteLogo} alt='logo' className='logo'></img></NavLink>
+          <NavLink to='/'><img src={logo} alt='logo' className='logo'></img></NavLink>
         </div>
         <nav className='navigation'>
           <ul className={menuSwitch}>

@@ -1,6 +1,7 @@
-import React from 'react'
-import about from '../images/backgrounds/abstract5.jpg';
-import photography from '../images/photography/photography.jpg';
+import React from 'react';
+import about from '../images/backgrounds/about_me_bg.webp';
+import photography from '../images/photography/photography.webp';
+import cv from '../download/Łukasz_Więckowski_CV.pdf';
 
 export default function About() {
   return (
@@ -60,7 +61,12 @@ export default function About() {
               <p>
                 Mam za sobą jeden komercyjny projekt, który wykonałem na początku studiów. Obecnie poszukuję pracy na stanowisku Junior Front-End Developer.
               </p>
-              <a className='about__button btn'>Pobierz CV <i class="las la-arrow-down"></i></a>
+              <a 
+                href={cv}
+                target='_blank' 
+                rel='noreferrer' 
+                className='about__button btn'
+              >Pobierz CV <i class="las la-arrow-down"></i></a>
             </div>
           </div>
         </div>

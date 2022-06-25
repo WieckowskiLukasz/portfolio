@@ -38,6 +38,15 @@
 	z-index: 1;
 	color: white;
 	font-size: 2.5rem;
+	animation: bg .6s linear;
+	@keyframes bg {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 100%;
+		}
+	}
 }
 
 @mixin element-container{
