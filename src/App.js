@@ -8,6 +8,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
+import Page404 from './pages/Page404';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
               <Route path='/kontakt' element={<Contact/>}/>
               <Route path='/skills' element={<Skills/>}/>
               <Route path='/projects' element={<Projects/>}/>
-              <Route path='*' element={<Home/>}/>
+              <Route path='*' element={<Page404/>}/>
             </Routes>
           </main>
           <footer>
