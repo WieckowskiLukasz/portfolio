@@ -30,35 +30,35 @@ export default function Home() {
 							</NavLink>
 						</div>
 						<div className='home-info__media-links-container'>
-						<a 
-							href='https://www.linkedin.com/in/WieckowskiLukasz' 
-							target='_blank' 
-							rel='noreferrer' 
-							className='home-info__media-link'>
-								<i class="lab la-linkedin-in"></i>
-						</a>
-						<a 
-							href='https://www.facebook.com/IWieckowskiLukasz' 
-							target='_blank' 
-							rel='noreferrer' 
-							className='home-info__media-link'>
-								<i class="lab la-facebook-f"></i>
-						</a>
-						<a 
-							href='https://github.com/WieckowskiLukasz' 
-							target='_blank' 
-							rel='noreferrer' 
-							className='home-info__media-link'>
-								<i class="lab la-github"></i>
-						</a>
-						<a 
-							href={cv}
-							target='_blank' 
-							rel='noreferrer' 
-							className='home-info__media-link cv'
-							>
-								CV
-						</a>
+							<a 
+								href='https://www.linkedin.com/in/WieckowskiLukasz' 
+								target='_blank' 
+								rel='noreferrer' 
+								className='home-info__media-link'>
+									<i class="lab la-linkedin-in"></i>
+							</a>
+							<a 
+								href='https://www.facebook.com/IWieckowskiLukasz' 
+								target='_blank' 
+								rel='noreferrer' 
+								className='home-info__media-link'>
+									<i class="lab la-facebook-f"></i>
+							</a>
+							<a 
+								href='https://github.com/WieckowskiLukasz' 
+								target='_blank' 
+								rel='noreferrer' 
+								className='home-info__media-link'>
+									<i class="lab la-github"></i>
+							</a>
+							<a 
+								href={cv}
+								target='_blank' 
+								rel='noreferrer' 
+								className='home-info__media-link cv'
+								>
+									CV
+							</a>
 						</div>
 					</div>
 				</div>

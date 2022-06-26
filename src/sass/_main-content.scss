@@ -155,15 +155,13 @@
 		letter-spacing: 1px;
 		padding: 7px;
 		background-color: $btn-bgc;
-		width: 160px;
+		width: auto;
 		border-radius: 2px;
 		transition: .3s;
 		text-shadow: none;
 		letter-spacing: 1px;
+		min-width: 160px;
 		cursor: pointer;
-		@include breakpointMax(xs){
-			width: 140px;
-		}
 		&:hover{
 			background-color: $btn-bgc-hover;
 		}
@@ -520,7 +518,8 @@
 	&__button{
 		display: block;
 		margin-top: 15px;
-		width: 130px;
+		min-width: 160px;
+		max-width: 160px;
 		text-align: center;
 		text-transform: uppercase;
 		i{
