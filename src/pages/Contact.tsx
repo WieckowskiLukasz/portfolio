@@ -1,21 +1,21 @@
 
-import React, { useRef, useState} from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import background from '../images/backgrounds/default_bg.webp';
 import validator from 'validator';
 
 export default function Contact(){
-  const [title, setTitle] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [title, setTitle] = useState<string>();
+  const [email, setEmail] = useState<string>();
+  const [message, setMessage] = useState<string>();
   const [titleValid, setTitleValid] = useState(false);
   const [emailValid, setEmailValid] = useState(false);
   const [messageValid, setMessageValid] = useState(false);
   const [formConfirmed, setFormConfirmed] = useState(false);
-  const [successfulSend, setSuccessfulSend] = useState();
+  const [successfulSend, setSuccessfulSend] = useState<boolean>();
   const [popUpActive, setPopUpActive] = useState(false);
 
-  const form = useRef();
+  const formRef = useRef<HTMLFormElement | null>(null);
 
   const handleTitle = (e) => {
     if(e.target.value.length < 5 || e.target.value.length >= 250) setTitleValid(false);
@@ -42,41 +42,44 @@ export default function Contact(){
   }
 
   const sendEmail = () => {
-    emailjs.sendForm('service_jqq82i6', 'template_p5k3mkn', form.current, 'CL2Yl5rY5WmzgXZiK')
-      .then((result) => {
-        setTitle('');
-        setEmail('');
-        setMessage('');
-        setTitleValid(false);
-        setEmailValid(false);
-        setMessageValid(false);
-        setFormConfirmed(false);
-        setPopUpActive(true);
-        setSuccessfulSend(true);
-      }, (error) => {
-        console.log(error.text);
-        setPopUpActive(true);
-        setSuccessfulSend(false);
-      });
+    let form;
+    if (formRef.current !== null) form = formRef.current;
+    
+  emailjs.sendForm('service_jqq82i6', 'template_p5k3mkn', form, 'CL2Yl5rY5WmzgXZiK')
+    .then((result) => {
+      setTitle('');
+      setEmail('');
+      setMessage('');
+      setTitleValid(false);
+      setEmailValid(false);
+      setMessageValid(false);
+      setFormConfirmed(false);
+      setPopUpActive(true);
+      setSuccessfulSend(true);
+    }, (error) => {
+      console.log(error.text);
+      setPopUpActive(true);
+      setSuccessfulSend(false);
+    });
   };
 
   const PopUpInfo = () =>{
     const successfulSendText = <><p>Twoja wiadomości została wysłana.</p><p>Dziękujemy za kontakt!</p></>;
     const errorSendText = <><p>Niestety nie udało się wysłać wiadomości.</p><p>Zapraszamy w innym terminie</p></>;
 
-    const textValue = successfulSend ? 
-      successfulSendText
-      : errorSendText;
+  const textValue = successfulSend ? 
+    successfulSendText
+    : errorSendText;
 
-    return(
-      <div className='contact-pop-up'>
-        <div className='contact-pop-up__content'>
-          <div className='contact-pop-up__text'>
-          {textValue}
-          </div>
-          <button onClick={()=> handlePopUpButton()} className='contact-pop-up__button btn'>OK</button>
+  return(
+    <div className='contact-pop-up'>
+      <div className='contact-pop-up__content'>
+        <div className='contact-pop-up__text'>
+        {textValue}
         </div>
+        <button onClick={()=> handlePopUpButton()} className='contact-pop-up__button btn'>OK</button>
       </div>
+    </div>
     );
   };
 
@@ -137,20 +140,20 @@ export default function Contact(){
               target='_blank' 
               rel='noreferrer'
             >
-              <i class="lab la-linkedin-in"></i>
+              <i className="lab la-linkedin-in"></i>
               linkedin.com/in/WieckowskiLukasz
             </a>
             <a className='link' href='mailto:lukasz.wieckowski.inf@gmail.com'>
-              <i class="las la-at"></i>lukasz.wieckowski.inf@gmail.com
+              <i className="las la-at"></i>lukasz.wieckowski.inf@gmail.com
             </a>
             <a className='link' href="tel:+48515581719">
-              <i class="las la-phone"></i>515-581-719
+              <i className="las la-phone"></i>515-581-719
             </a>
           </div>
         </div>
         <div className='contact__header'>Formularz kontaktowy</div>
         <div className='contact__form-container'>
-          <form className='contact__form' noValidate ref={form} onSubmit={handleForm}>
+          <form className='contact__form' noValidate ref={formRef} onSubmit={handleForm}>
             <label className={titleLabel}>
               Tytuł {titleError}
             </label>
@@ -188,7 +191,7 @@ export default function Contact(){
               type='submit' 
             >
               Wyślij
-              <i class="las la-paper-plane"></i></button>
+              <i className="las la-paper-plane"></i></button>
           </form>
         </div>
       </div>

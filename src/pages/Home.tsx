@@ -26,7 +26,7 @@ export default function Home() {
 					<div className='home-info__more-info'>
 						<div className='home-info__btn-more-info'>
 							<NavLink to='/o-mnie'>
-								Więcej o mnie<i class="las la-angle-double-right"></i>
+								Więcej o mnie<i className='las la-angle-double-right'></i>
 							</NavLink>
 						</div>
 						<div className='home-info__media-links-container'>
@@ -35,21 +35,21 @@ export default function Home() {
 								target='_blank' 
 								rel='noreferrer' 
 								className='home-info__media-link'>
-									<i class="lab la-linkedin-in"></i>
+									<i className='lab la-linkedin-in'></i>
 							</a>
 							<a 
 								href='https://www.facebook.com/IWieckowskiLukasz' 
 								target='_blank' 
 								rel='noreferrer' 
 								className='home-info__media-link'>
-									<i class="lab la-facebook-f"></i>
+									<i className='lab la-facebook-f'></i>
 							</a>
 							<a 
 								href='https://github.com/WieckowskiLukasz' 
 								target='_blank' 
 								rel='noreferrer' 
 								className='home-info__media-link'>
-									<i class="lab la-github"></i>
+									<i className='lab la-github'></i>
 							</a>
 							<a 
 								href={cv}

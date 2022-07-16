@@ -42,7 +42,7 @@ export default function Projects() {
                     Aplikacja internetowa dla Gminnego Zakładu Gospodarki Komunalnej w Gozdowie. Jest to pierwszy komercyjny projekt, został wykonany na początku studiów (01.2020r.), a następnie wykorzystany na potrzeby pracy inżynierskiej. Na potrzeby zakładu wykonany został od podstaw panel admistracyjny w języku PHP.
                   </div>
                 <div className='projects__technologies'>
-                  <i class="las la-code"></i>
+                  <i className='las la-code'></i>
                   HTML5, CSS3, PHP, MySQL, Bootstrap, JavaScript;
                 </div>
                 <a 
@@ -51,7 +51,7 @@ export default function Projects() {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <i class="las la-link"></i> 
+                  <i className='las la-link'></i> 
                   gozdowo.info
                 </a>
               </div>
@@ -79,8 +79,8 @@ export default function Projects() {
                   Aplikacja pogodowa korzystająca z darmowego klucza API OpenWeatherMap. Projekt został wykonany w React. Zastosowano komponenty funkcyjne z hookami, React Context i React Router. Za oprawę graficzną odpowiada Saas. Aplikacja została uruchomiona na GitHub Pages.
                 </div>
                 <div className='projects__technologies'>
-                  <i class="las la-code"></i>
-                  HTML5, ReactJS, JavaScript, Saas;
+                  <i className='las la-code'></i>
+                  HTML5, ReactJS, TypeScript, Saas;
                 </div>
                 <a 
                   href='https://github.com/WieckowskiLukasz/weatherForecast'
@@ -88,7 +88,7 @@ export default function Projects() {
                   rel='noreferrer'
                   className='projects__link link'
                 >
-                  <i class="lab la-github"></i> 
+                  <i className='lab la-github'></i> 
                   github.com/WieckowskiLukasz/weatherForecast
                 </a>
                 <a
@@ -97,12 +97,11 @@ export default function Projects() {
                   rel='noreferrer'
                   className='projects__link link'
                 >
-                  <i class="las la-link"></i> 
+                  <i className='las la-link'></i> 
                   wieckowskilukasz.github.io/weatherForecast
                 </a>
               </div>
             </div>
-
             <div className='projects__item'>
               <Ratio ratio={ 16 / 9 }>
                 <div className='projects__image-container'>
@@ -126,8 +125,8 @@ export default function Projects() {
                   Aplikacja wykonana na potrzeby portfolio. Projekt został wykonany w React. Zastosowano komponenty funkcyjne z hookami i React Router. Za oprawę graficzną odpowiada Saas. Aplikacja została uruchomiona na GitHub Pages.
                 </div>
                 <div className='projects__technologies'>
-                  <i class="las la-code"></i>
-                  HTML5, ReactJS, JavaScript, Saas;
+                  <i className='las la-code'></i>
+                  HTML5, ReactJS, TypeScript, Saas;
                 </div>
                 <a 
                   href='https://github.com/WieckowskiLukasz/portfolio'
@@ -135,7 +134,7 @@ export default function Projects() {
                   rel='noreferrer'
                   className='projects__link link'
                 >
-                  <i class="lab la-github"></i> 
+                  <i className='lab la-github'></i> 
                   github.com/WieckowskiLukasz/portfolio
                 </a>
                 <a
@@ -144,7 +143,7 @@ export default function Projects() {
                   rel='noreferrer'
                   className='projects__link link'
                 >
-                  <i class="las la-link"></i> 
+                  <i className='las la-link'></i> 
                   wieckowskilukasz.github.io/portfolio
                 </a>
               </div>

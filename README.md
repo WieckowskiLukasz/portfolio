@@ -2,7 +2,7 @@
 
 ## Description
 
-This app is my portfolio. The application was made in ReactJS and Saas.
+This app is my portfolio. The application was made in ReactJS, TypeScript and Saas.
 
 ## GitHub Pages
 

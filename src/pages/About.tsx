@@ -29,21 +29,21 @@ export default function About() {
                     target='_blank' 
                     rel='noreferrer' 
                     className='about__media-link'>
-                      <i class="lab la-linkedin-in"></i>
+                      <i className='lab la-linkedin-in'></i>
                   </a>
                   <a 
                     href='https://www.facebook.com/IWieckowskiLukasz' 
                     target='_blank' 
                     rel='noreferrer' 
                     className='about__media-link'>
-                      <i class="lab la-facebook-f"></i>
+                      <i className='lab la-facebook-f'></i>
                   </a>
                   <a 
                     href='https://github.com/WieckowskiLukasz' 
                     target='_blank' 
                     rel='noreferrer' 
                     className='about__media-link'>
-                      <i class="lab la-github"></i>
+                      <i className='lab la-github'></i>
                   </a>
                 </div>
               </div>
@@ -66,7 +66,7 @@ export default function About() {
                 target='_blank' 
                 rel='noreferrer' 
                 className='about__button btn'
-              >Pobierz CV <i class="las la-arrow-down"></i></a>
+              >Pobierz CV <i className='las la-arrow-down'></i></a>
             </div>
           </div>
         </div>

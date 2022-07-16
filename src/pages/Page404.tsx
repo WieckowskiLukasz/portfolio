@@ -15,7 +15,7 @@ export default function Page404() {
 				</div>
         <div className='page404'>
           <div className='page404__text'>Strona o podanym adresie nie istnieje.</div>
-          <button href='' className='page404__button btn'><NavLink to='/'>Przejdź do strony głównej</NavLink></button>
+          <button className='page404__button btn'><NavLink to='/'>Przejdź do strony głównej</NavLink></button>
         </div>
 			</div>
     </>

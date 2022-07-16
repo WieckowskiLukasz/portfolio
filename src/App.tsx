@@ -1,30 +1,31 @@
 import './App.scss';
+import React from 'react';
 import { Route , Routes} from 'react-router';
 import { HashRouter } from 'react-router-dom';
-import Header from './layouts/Header';
-import Footer from './layouts/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Skills from './pages/Skills';
-import Projects from './pages/Projects';
-import Page404 from './pages/Page404';
+import Header from './layouts/Header.tsx';
+import Footer from './layouts/Footer.tsx';
+import Home from './pages/Home.tsx';
+import About from './pages/About.tsx';
+import Contact from './pages/Contact.tsx';
+import Skills from './pages/Skills.tsx';
+import Projects from './pages/Projects.tsx';
+import Page404 from './pages/Page404.tsx';
 
 function App() {
   return (
     <div className='App'>
-      <HashRouter hashtype='noslash'>
+      <HashRouter>
         <header>
           <Header/>
         </header>
         <div className='container'>
           <main>
             <Routes>
-              <Route exact path='/' element={<Home/>}/>
+              <Route path='/' element={<Home/>}/>
               <Route path='/o-mnie' element={<About/>}/>
               <Route path='/kontakt' element={<Contact/>}/>
-              <Route path='/skills' element={<Skills/>}/>
-              <Route path='/projects' element={<Projects/>}/>
+              <Route path='/umiejetnosci' element={<Skills/>}/>
+              <Route path='/projekty' element={<Projects/>}/>
               <Route path='*' element={<Page404/>}/>
             </Routes>
           </main>
