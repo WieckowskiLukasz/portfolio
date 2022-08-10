@@ -7,6 +7,9 @@
 	margin-bottom: 40px;
 	padding-bottom: 10px;
 	border-bottom: solid 1px rgba(211, 211, 211, 0.2);
+	letter-spacing: 4px;
+	font-weight: 500;
+	text-shadow: $text-shadow;
   @include breakpointMax(xl){
     width: 60%;
   }
@@ -14,6 +17,7 @@
     width: 75%;
   }
   @include breakpointMax(sm){
+		letter-spacing: normal;
 		padding-left: 20px;
 		width: 100%;
     font-size: 2.1rem;
@@ -69,19 +73,30 @@
 	box-sizing: border-box;
 	color: white;
 	text-decoration: none;
-	border-radius: 2px;
+	border-radius: 50%;
 	font-size: 2rem;
-	background-color: rgb(105, 65, 250);
+	/* background-color: rgb(105, 65, 250); */
+	border: dotted 2px $btn-bgc;
 	margin: 0 5px;
-	padding: 0 5px;
-	width: 40px;
-	height: 41px !important;
+	padding: 3px;
+	width: 50px;
+	height: 50px;
 	cursor: pointer;
 	transition: .3s;
+	@include breakpointMax(xs){
+		font-size: 1.8rem;
+		padding: 2px;
+		width: 45px;
+		height: 45px;
+	}
 	@include breakpointMax(xxs){
-		margin: 0 7px;
+		margin: 0 4px;
+		font-size: 1.4rem;
+		width: 35px;
+		height: 35px;
 	}
 	&:hover{
-		background-color: rgb(133, 100, 255);
+		background-color: $btn-bgc-hover;
+		border: dotted 2px $btn-bgc-hover;
 	}
 }

@@ -19,8 +19,7 @@
 	font-size: 1rem;
 	letter-spacing: 1px;
 	font-weight: 500;
-	text-shadow: none !important;
-	color: white;
+	color: $btn-color;
 	text-transform: uppercase;
 	&:hover{
 		background-color: $btn-bgc-hover;
@@ -102,8 +101,10 @@
 	&__picture{
 		margin-right: 15px;
 		img{
-			width: 150px;
-			border-radius: 2px;
+			padding: 6px;
+			width: 170px;
+			border-radius: 50%;
+			border: solid 2px rgb(94, 139, 207);
 			filter: brightness(95%);
 			@include breakpointMax(sm){
 				width: 140px;
@@ -117,14 +118,22 @@
 		}
 	}
 	&__name{
+		width: 100%;
 		display: flex;
 		min-height: 100%;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: center;
+		align-self: center;
 		font-size: 3.2rem;
-		text-align: left;
+		text-align: center;
 		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 500;
+		p:first-child {
+			color: rgb(94, 139, 207);
+		}
 		@include breakpointMax(sm){
+			letter-spacing: normal;
 			font-size: 2.8rem;
 		}
 		@include breakpointMax(sm){
@@ -140,6 +149,9 @@
 			font-size: 1.8rem;
 		}
 		@include breakpointMax(xxxs){
+			p:first-child {
+				margin-right: 10px;
+			}
 			margin-top: 5px;
 			flex-direction: row;
 		}
@@ -148,6 +160,10 @@
 		text-align: justify;
 		font-size: 1.2rem;
 		margin-bottom: 20px;
+		text-shadow: $text-shadow;
+		@include breakpointMax(xxxs){
+			font-size: 1.1rem;
+		}
 	}
 	&__btn-more-info{
 		display: flex;
@@ -161,11 +177,18 @@
 		text-shadow: none;
 		letter-spacing: 1px;
 		min-width: 160px;
+		@include breakpointMax(xs){
+			min-width: 130px;
+		}
+		@include breakpointMax(xxs){
+			min-width: 120px;
+		}
 		cursor: pointer;
 		&:hover{
 			background-color: $btn-bgc-hover;
 		}
 		a{
+			text-shadow: $text-shadow;
 			display: block;
 			font-size: 1rem;
 			width: 100%;
@@ -174,7 +197,7 @@
 			text-decoration: none;
 			text-transform: uppercase;
 			@include breakpointMax(xs){
-				font-size: .9rem;
+				font-size: .8rem;
 			}
 			@include breakpointMax(xxs){
 				font-size: .85rem;
@@ -260,6 +283,7 @@
 		align-items: center;
 		display: flex;
 		border-right: $border;
+		text-shadow: $text-shadow;
 		@include breakpointMin(lg){
 			width: 100%;
 			border-right: none;
@@ -292,6 +316,7 @@
 		font-size: 1.2rem;
 		transform: translateY(4px);
 		text-align: justify;
+		text-shadow: $text-shadow;
 		@include breakpointMin(lg){
 			font-size: 1.15rem;
 			margin-left: 0;
@@ -397,6 +422,7 @@
 		margin-top: 20px;
 		width: 130px;
 		align-self: center;
+		text-shadow: $text-shadow;
 		i{
 			margin-left: 5px;
 			font-size: 1.2rem;
@@ -472,6 +498,7 @@
 			flex-direction: column;
 		}
 		p{
+			text-shadow: $text-shadow;
 			max-width: 100%;
 			margin-bottom: 10px;
 			@include breakpointMax(sm){
@@ -488,7 +515,9 @@
 			justify-content: space-between;
 		}
 		img{
-			border-radius: 2px;
+			border-radius: 50%;
+			border: solid 2px rgb(94, 139, 207);
+			padding: 5px;
 			width: 230px;
 			filter: brightness(100%);
 			@include breakpointMax(sm){
@@ -524,7 +553,7 @@
 	}
 	&__media-links-container{
 		display: flex;
-		justify-content: flex-start;
+		justify-content: space-between;
 		@include breakpointMax(xxxs){
 			justify-content: center;
 		}
@@ -534,11 +563,7 @@
 		@include breakpointMax(xxs){
 			margin: 0 4px;
 		}
-		@include breakpointMax(xxxs){
-			margin: 0 4px;
-			font-size: 1.5rem;
-			width: 30px;
-		}
+		
 	}
 	&__button{
 		display: block;
@@ -547,6 +572,7 @@
 		max-width: 160px;
 		text-align: center;
 		text-transform: uppercase;
+		text-shadow: $text-shadow;
 		i{
 			transition: .3s;
 		}
@@ -606,7 +632,7 @@
 		font-size: 4rem;
 		font-weight: 500;
 		text-transform: uppercase;
-		text-shadow: 1px 1px black;
+		text-shadow: $text-shadow;
 		transition: .3s;
 		width: 90%;
 		@include breakpointMax(sm){
@@ -632,10 +658,12 @@
 		align-items: flex-start;
 		text-align: justify;
 		padding: 10px 0;
+		text-shadow: $text-shadow;
 	}
 	&__technologies{
 		padding: 10px 0;
 		text-align: left;
+		text-shadow: $text-shadow;
 	}
 	&__link{
 		padding: 10px 0;

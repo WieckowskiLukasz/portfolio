@@ -21,7 +21,7 @@ export default function Home() {
 						<div className='home-info__name'><p>Łukasz</p><p>Więckowski</p></div>
 					</div>
 					<div className='home-info__about-me'>
-						Jestem początkującym programistą front-end. Interesuję się tworzeniem nowoczesnych interfejsów i wykonywaniem aplikacji webowych korzystając z technologii ReactJS i Saas.
+						Jestem początkującym programistą front-end. Interesuję się tworzeniem nowoczesnych interfejsów i wykonywaniem aplikacji webowych korzystając z technologii ReactJS, TypeScript i Saas.
 					</div>
 					<div className='home-info__more-info'>
 						<div className='home-info__btn-more-info'>
