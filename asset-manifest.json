@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.3a94c453.css",
-    "main.js": "/portfolio/static/js/main.b011a167.js",
+    "main.css": "/portfolio/static/css/main.ce6a7053.css",
+    "main.js": "/portfolio/static/js/main.72cdaca8.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
-    "static/media/Łukasz_Więckowski_CV.pdf": "/portfolio/static/media/Łukasz_Więckowski_CV.3e617486a83ff73ec84b.pdf",
+    "static/media/Łukasz_Więckowski_CV.pdf": "/portfolio/static/media/Łukasz_Więckowski_CV.cb0a36e8c961fd20dc51.pdf",
     "static/media/home.webp": "/portfolio/static/media/home.05f4bbe0419afa7980b3.webp",
     "static/media/about_me_bg.webp": "/portfolio/static/media/about_me_bg.cfd4aa6ab2a457e99653.webp",
     "static/media/memoryCardGame.webp": "/portfolio/static/media/memoryCardGame.ebe233e44a539aaf19ed.webp",
@@ -18,12 +18,12 @@
     "static/media/icomoon.woff?1fubez": "/portfolio/static/media/icomoon.c8da952c4fbac981ef6f.woff",
     "static/media/icomoon.ttf?1fubez": "/portfolio/static/media/icomoon.789b054e08ed062583a0.ttf",
     "index.html": "/portfolio/index.html",
-    "main.3a94c453.css.map": "/portfolio/static/css/main.3a94c453.css.map",
-    "main.b011a167.js.map": "/portfolio/static/js/main.b011a167.js.map",
+    "main.ce6a7053.css.map": "/portfolio/static/css/main.ce6a7053.css.map",
+    "main.72cdaca8.js.map": "/portfolio/static/js/main.72cdaca8.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3a94c453.css",
-    "static/js/main.b011a167.js"
+    "static/css/main.ce6a7053.css",
+    "static/js/main.72cdaca8.js"
   ]
 }
