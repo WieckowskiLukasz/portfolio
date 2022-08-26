@@ -1,5 +1,5 @@
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, SyntheticEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import background from '../images/backgrounds/default_bg.webp';
 import validator from 'validator';
@@ -8,31 +8,31 @@ export default function Contact(){
   const [title, setTitle] = useState<string>();
   const [email, setEmail] = useState<string>();
   const [message, setMessage] = useState<string>();
-  const [titleValid, setTitleValid] = useState(false);
-  const [emailValid, setEmailValid] = useState(false);
-  const [messageValid, setMessageValid] = useState(false);
-  const [formConfirmed, setFormConfirmed] = useState(false);
+  const [titleValid, setTitleValid] = useState<boolean>(false);
+  const [emailValid, setEmailValid] = useState<boolean>(false);
+  const [messageValid, setMessageValid] = useState<boolean>(false);
+  const [formConfirmed, setFormConfirmed] = useState<boolean>(false);
   const [successfulSend, setSuccessfulSend] = useState<boolean>();
-  const [popUpActive, setPopUpActive] = useState(false);
+  const [popUpActive, setPopUpActive] = useState<boolean>(false);
 
   const formRef = useRef<HTMLFormElement | null>(null);
 
-  const handleTitle = (e) => {
-    if(e.target.value.length < 5 || e.target.value.length >= 250) setTitleValid(false);
+  const handleTitle = (e: SyntheticEvent) => {
+    if((e.target as HTMLInputElement).value.length < 5 || (e.target as HTMLInputElement).value.length >= 250) setTitleValid(false);
     else setTitleValid(true);
-    setTitle(e.target.value);
+    setTitle((e.target as HTMLInputElement).value);
   };
-  const handleEmail = (e) => {
-    if(!validator.isEmail(e.target.value)) setEmailValid(false);
+  const handleEmail = (e: SyntheticEvent) => {
+    if(!validator.isEmail((e.target as HTMLInputElement).value)) setEmailValid(false);
     else setEmailValid(true);
-    setEmail(e.target.value);
+    setEmail((e.target as HTMLInputElement).value);
   };
-  const handleMessage = (e) => {
-    if(e.target.value.length < 5 || e.target.value.length >= 1500) setMessageValid(false);
+  const handleMessage = (e: SyntheticEvent) => {
+    if((e.target as HTMLInputElement).value.length < 5 || (e.target as HTMLInputElement).value.length >= 1500) setMessageValid(false);
     else setMessageValid(true);
-    setMessage(e.target.value);
+    setMessage((e.target as HTMLInputElement).value);
   };
-  const handleForm = (e) =>{
+  const handleForm = (e: SyntheticEvent) =>{
     e.preventDefault();
     setFormConfirmed(true);
     if(titleValid && emailValid && messageValid) sendEmail();

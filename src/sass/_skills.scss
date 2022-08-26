@@ -1,0 +1,90 @@
+.skills-info{
+	@include page-container;
+	&__header{
+		@include content-header;
+	}
+	&__skills-container{
+		@include element-container;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		@include breakpointMin(lg){
+			justify-content: space-between;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: stretch
+		}
+	}
+	&__skill-item{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		align-content: center;
+		padding: 20px;
+		background-color: $element-bgc-color;
+		margin-bottom: 10px;
+		width: 100%;
+		@include breakpointMin(lg){
+			max-width: 30%;
+			flex-direction: column;
+			margin-bottom: 30px;
+			min-height: 250px;
+		}
+		@include breakpointMax(sm){
+			flex-direction: column;
+		}
+	}
+	&__skill-name-container{
+		min-height: 40px;
+		align-items: center;
+		display: flex;
+		border-right: $border;
+		text-shadow: $text-shadow;
+		@include breakpointMin(lg){
+			width: 100%;
+			border-right: none;
+			border-bottom: $border;
+			padding-bottom: 5px;
+			min-height: 50px;
+		}
+		@include breakpointMax(sm){
+			border-right: none;
+		}
+	}
+	&__skill-icon{
+		min-width: 40px;
+		margin-right: 20px;
+		font-size: 2.5rem;
+		&.icon{
+			display: block;
+			font-size: 1.9rem;
+		}
+	}
+	&__skill-name{
+		text-align: left;
+		font-size: 1.3rem;
+		min-width: 120px;
+		font-weight: 500;
+	}
+	&__skill-description{
+		padding-bottom: 10px;
+		margin-left: 50px;
+		font-size: 1.2rem;
+		transform: translateY(4px);
+		text-align: justify;
+		text-shadow: $text-shadow;
+		@include breakpointMin(lg){
+			font-size: 1.15rem;
+			margin-left: 0;
+			padding-top: 10px;
+			text-align: left;
+		}
+		@include breakpointMax(sm){
+			align-self: flex-start;
+			border-top: $border;
+			padding: 10px;
+			margin: 0;
+			width: 100%;
+		}
+	}
+}

@@ -56,7 +56,7 @@ export default function About() {
                 Jestem abolwentem Szkoły Wyższej im. Pawła Włodkowica w Płocku, ukończyłem studia inżynierskie na kierunku <i>Informatyka</i> ze specjalnością <i>Programowanie i bazy danych</i>.  
               </p>
               <p>
-                Praktycznie od początku studiów moją uwagę skupiłem na webmasteringu, a szczególnie na technologiach front-endowych. Moje ulubione technologie to ReactJS i Saas.
+                Praktycznie od początku studiów moją uwagę skupiłem na webmasteringu, a szczególnie na technologiach front-endowych. Moje ulubione technologie to ReactJS i Sass.
               </p>
               <p>
                 Mam za sobą jeden komercyjny projekt, który wykonałem na początku studiów. Obecnie poszukuję pracy na stanowisku Junior Front-End Developer.

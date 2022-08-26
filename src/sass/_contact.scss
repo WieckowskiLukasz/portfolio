@@ -1,0 +1,140 @@
+.contact{
+	@include page-container;
+	&__header{
+		@include content-header;
+	}
+	&__info-container{
+		@include element-container;
+	}
+	&__info{
+		padding: 20px;
+		width: 100%;
+		font-size: 1.2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		background-color: $element-bgc-color;
+		a{
+			padding: 5px 0;
+			color: white;
+			text-decoration: none;
+			cursor: pointer;
+			i{
+				margin-right: 10px;
+				font-size: 1.6rem;
+				transform: translateY(2px);
+			}
+		}
+	}
+	&__form-container{
+		@include element-container;
+	}
+	&__form{
+		width: 100%;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		color: white;
+		text-align: left;
+		background-color: $element-bgc-color;
+		textarea{
+			min-height: 200px;
+		}
+	}
+	&__form-label{
+		text-transform: uppercase;
+		font-size: 1rem;
+		text-shadow: $text-shadow;
+		letter-spacing: 1px;
+		transition: .3s;
+		padding: 15px 0;
+		font-weight: 500;
+		@include breakpointMax(sm){
+			font-size: 1rem;
+		}
+		&--error{
+			color: $font-color-error;
+			text-shadow: none;
+		}
+	}
+	&__form-input{
+		max-width: 100%;
+		background-color: $input-bgc-color;
+		border: none;
+		padding: 10px;
+		color: $font-color;
+		font-size: .9rem;
+		letter-spacing: 1px;
+		transition: .3s;
+		&--error{
+			box-shadow: inset 0px 0px 0px 2px rgba(167, 36, 46, 0.39);
+		}
+		&--validated{
+			box-shadow: inset 0px 0px 0px 2px rgba(9, 97, 35, 0.39);
+		}
+		&::placeholder{
+			color: rgb(190, 190, 190);
+			text-align: left;
+		}
+		&:focus{
+			color: $font-color;
+			outline: none;
+		}
+	}
+	&__form-submit{
+		border: none;
+		padding: 10px;
+		margin-top: 20px;
+		width: 130px;
+		align-self: center;
+		text-shadow: $text-shadow;
+		i{
+			margin-left: 5px;
+			font-size: 1.2rem;
+			transition: .3s;
+		}
+		&:hover{
+			i{
+				transform: translateX(5px);
+			}
+		}
+	}
+}
+
+.contact-pop-up{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color: rgba(7, 5, 29, 0.712);
+	&__content{
+		color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 400px;
+		height: 200px;
+		background-color: $footer-bgc;
+		display: flex;
+		flex-direction: column;
+		padding: 15px;
+		justify-content: center;
+		align-items: center;
+		@include breakpointMax(xs){
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__text{
+		font-size: 1.1rem;
+		padding: 20px;
+	}
+	&__button{
+		width: 120px;
+		border: none;
+		align-self: center;
+	}
+}

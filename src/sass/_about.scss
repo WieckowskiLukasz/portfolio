@@ -1,0 +1,147 @@
+.about{
+	@include page-container;
+	justify-content: flex-start;
+	&__header{
+		@include content-header;
+		width: 45%;
+		@include breakpointMin(2000px){
+			width: 35%;
+		}
+		@include breakpointMax(xl){
+			width: 55%;
+		}
+		@include breakpointMax(lg){
+			width: 70%;
+		}
+		@include breakpointMax(md){
+			width: 80%;
+		}
+		@include breakpointMax(sm){
+			padding-left: 20px;
+			width: 100%;
+		}
+	}
+	&__info-container{
+		padding-left: 20px;
+		display: flex;
+		width: 45%;
+		margin-bottom: 20px;
+		@include breakpointMin(2000px){
+			width: 35%;
+		}
+		@include breakpointMax(xl){
+			width: 55%;
+		}
+		@include breakpointMax(lg){
+			width: 70%;
+		}
+		@include breakpointMax(md){
+			width: 80%;
+		}
+		@include breakpointMax(sm){
+			padding: 0;
+			width: 100%;
+		}
+		@include breakpointMax(sm){
+			padding: 20px;
+			width: 100%;
+			flex-direction: column;
+			background-color: $about-me-bgc-color;
+		}
+	}
+	&__info{
+		width: 100%;
+		font-size: 1.2rem;
+		padding-left: 20px;
+		text-align: justify;
+		@include breakpointMax(sm){
+			padding-left: 0;
+			max-width: 100%;
+			flex-direction: column;
+		}
+		p{
+			text-shadow: $text-shadow;
+			max-width: 100%;
+			margin-bottom: 10px;
+			@include breakpointMax(sm){
+				text-shadow: $text-shadow;
+			}
+		}
+	}
+	&__photo{
+		display: flex;
+		flex-direction: column;
+		@include breakpointMax(sm){
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		img{
+			border-radius: 50%;
+			border: solid 2px rgb(94, 139, 207);
+			padding: 5px;
+			width: 230px;
+			filter: brightness(100%);
+			@include breakpointMax(sm){
+				width: 180px;
+				margin-bottom: 20px;
+			}
+			@include breakpointMax(xxs){
+				width: 135px;
+				margin-bottom: 20px;
+			}
+			@include breakpointMax(xxxs){
+				width: 110px;
+			}
+		}
+	}
+	&__media-links{
+		padding: 5px;
+	}
+	&__media-links-header{
+		border-bottom: $border;
+		text-align: left;
+		padding: 5px 0;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		font-size: 1rem;
+		@include breakpointMax(sm){
+			margin-left: 10px;
+			padding: 0 0 5px 0;
+		}
+		@include breakpointMax(xxxs){
+			font-size: .9rem;
+		}
+	}
+	&__media-links-container{
+		display: flex;
+		justify-content: space-between;
+		@include breakpointMax(xxxs){
+			justify-content: center;
+		}
+	}
+	&__media-link{
+		@include media-link;
+		@include breakpointMax(xxs){
+			margin: 0 4px;
+		}
+		
+	}
+	&__button{
+		display: block;
+		margin-top: 15px;
+		min-width: 160px;
+		max-width: 160px;
+		text-align: center;
+		text-transform: uppercase;
+		text-shadow: $text-shadow;
+		i{
+			transition: .3s;
+		}
+		&:hover{
+			i{
+				transform: translateY(4px);
+			}
+		}
+	}
+}

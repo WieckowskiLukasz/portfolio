@@ -1,0 +1,183 @@
+.home-info{
+	z-index: 1;
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	color: $font-color;
+	text-shadow: $text-shadow;
+	width: 600px;
+	background-color: $about-me-bgc-color;
+	padding: 15px;
+	animation: bg .6s linear;
+	@keyframes bg {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 100%;
+		}
+	}
+	@include breakpointMax(md){
+    width: 80%;
+		top: 10%;
+		margin: auto;
+		padding: 15px;
+  }
+	@include breakpointMax(xs){
+		padding: 15px;
+    width: 100%;
+		left: 0;
+  }
+	@include breakpointMax(xxs){
+		top: 5%;
+  }
+	&__name-container{
+		display: flex;
+		margin-bottom: 10px;
+		@include breakpointMax(xxxs){
+			flex-direction: column;
+		}
+	}
+	&__picture{
+		margin-right: 15px;
+		img{
+			padding: 6px;
+			width: 170px;
+			border-radius: 50%;
+			border: solid 2px rgb(94, 139, 207);
+			filter: brightness(95%);
+			@include breakpointMax(sm){
+				width: 140px;
+			}
+			@include breakpointMax(sm){
+				width: 130px;
+			}
+		}
+		@include breakpointMax(xxxs){
+			margin: 0;
+		}
+	}
+	&__name{
+		width: 100%;
+		display: flex;
+		min-height: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-self: center;
+		font-size: 3.2rem;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 500;
+		p:first-child {
+			color: rgb(94, 139, 207);
+		}
+		@include breakpointMax(sm){
+			letter-spacing: normal;
+			font-size: 2.8rem;
+		}
+		@include breakpointMax(sm){
+			font-size: 2.6rem;
+		}
+		@include breakpointMax(sm){
+			font-size: 2.4rem;
+		}
+		@include breakpointMax(xxs){
+			font-size: 2.2rem;
+		}
+		@include breakpointMax(320px){
+			font-size: 1.8rem;
+		}
+		@include breakpointMax(xxxs){
+			p:first-child {
+				margin-right: 10px;
+			}
+			margin-top: 5px;
+			flex-direction: row;
+		}
+	}
+	&__about-me{
+		text-align: justify;
+		font-size: 1.2rem;
+		margin-bottom: 20px;
+		text-shadow: $text-shadow;
+		@include breakpointMax(xxxs){
+			font-size: 1.1rem;
+		}
+	}
+	&__btn-more-info{
+		display: flex;
+		align-items: center;
+		letter-spacing: 1px;
+		padding: 7px;
+		background-color: $btn-bgc;
+		width: auto;
+		border-radius: 2px;
+		transition: .3s;
+		text-shadow: none;
+		letter-spacing: 1px;
+		min-width: 160px;
+		@include breakpointMax(xs){
+			min-width: 130px;
+		}
+		@include breakpointMax(xxs){
+			min-width: 120px;
+		}
+		cursor: pointer;
+		&:hover{
+			background-color: $btn-bgc-hover;
+		}
+		a{
+			text-shadow: $text-shadow;
+			display: block;
+			font-size: 1rem;
+			width: 100%;
+			color: $font-color;
+			font-weight: 500;
+			text-decoration: none;
+			text-transform: uppercase;
+			@include breakpointMax(xs){
+				font-size: .8rem;
+			}
+			@include breakpointMax(xxs){
+				font-size: .85rem;
+			}
+			i{
+				margin-left: 5px;
+				transition: .3s;
+			}
+			&:hover{
+				i{
+					transform: translateX(5px);
+				}
+			}
+		}
+  }
+	&__more-info{
+		display: flex;
+		justify-content: space-between;
+		@include breakpointMax(xxs){
+			flex-direction: column;
+			align-items: center;
+			height: 90px;
+		}
+	}
+	&__media-links-container{
+		display: flex;
+	}
+	&__media-link{
+		@include media-link;
+	}
+	.cv{
+		margin-right: 0;
+		font-size: 1.6rem;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
+		@include breakpointMax(xs){
+			font-size: 1.4rem;
+		}
+	}
+}

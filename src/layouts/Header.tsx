@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState, useLayoutEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 import logo  from '../images/logo/logo.svg';
 import { useLocation } from 'react-router-dom';
@@ -9,7 +9,7 @@ const Header = () =>{
   const [pageMobile, setpageMobile] = useState(false);
   const location = useLocation();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     handleWidth();
   }, [pageMobile]);
   useEffect(() => window.addEventListener('scroll', handleScroll));
