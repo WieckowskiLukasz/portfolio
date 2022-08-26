@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.a1d1894c.css",
-    "main.js": "/portfolio/static/js/main.72cdaca8.js",
+    "main.js": "/portfolio/static/js/main.c7d77bfa.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Łukasz_Więckowski_CV.pdf": "/portfolio/static/media/Łukasz_Więckowski_CV.cb0a36e8c961fd20dc51.pdf",
     "static/media/home.webp": "/portfolio/static/media/home.05f4bbe0419afa7980b3.webp",
@@ -19,11 +19,11 @@
     "static/media/icomoon.ttf?1fubez": "/portfolio/static/media/icomoon.789b054e08ed062583a0.ttf",
     "index.html": "/portfolio/index.html",
     "main.a1d1894c.css.map": "/portfolio/static/css/main.a1d1894c.css.map",
-    "main.72cdaca8.js.map": "/portfolio/static/js/main.72cdaca8.js.map",
+    "main.c7d77bfa.js.map": "/portfolio/static/js/main.c7d77bfa.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a1d1894c.css",
-    "static/js/main.72cdaca8.js"
+    "static/js/main.c7d77bfa.js"
   ]
 }
