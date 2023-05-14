@@ -1,6 +1,6 @@
 import React from 'react';
 import about from '../images/backgrounds/about_me_bg.webp';
-import photography from '../images/photography/photography.webp';
+import photography from '../images/photography/about.jpg';
 import cv from '../download/Łukasz_Więckowski_CV.pdf';
 
 export default function About() {
@@ -50,23 +50,27 @@ export default function About() {
             </div>
             <div className='about__info'>
               <p>
-                Nazywam się Łukasz Więckowski, od trzech lat  interesuję się wykonywaniem aplikacji internetowych.
+                Nazywam się Łukasz Więckowski, jestem front-end developerem i specjalizuję się w wykonywaniu aplikacji internetowych.
               </p>
               <p>
                 Jestem abolwentem Szkoły Wyższej im. Pawła Włodkowica w Płocku, ukończyłem studia inżynierskie na kierunku <i>Informatyka</i> ze specjalnością <i>Programowanie i bazy danych</i>.  
               </p>
               <p>
-                Praktycznie od początku studiów moją uwagę skupiłem na webmasteringu, a szczególnie na technologiach front-endowych. Moje ulubione technologie to ReactJS i Sass.
+                Praktycznie od początku studiów moją uwagę skupiłem na webmasteringu, a szczególnie na technologiach front-endowych. Moje ulubione technologie to React, Next.js i TypeScript.
               </p>
               <p>
-                Mam za sobą jeden komercyjny projekt, który wykonałem na początku studiów. Obecnie poszukuję pracy na stanowisku Junior Front-End Developer.
+                W swojej pracy korzystam także z takich technologii jak Material UI, Redux czy Sass. W przeszłości tworzyłem projekty w podejściu full-stack korzystając z PHP, MySQL i JavaScript.
               </p>
-              <a 
-                href={cv}
-                target='_blank' 
-                rel='noreferrer' 
-                className='about__button btn'
-              >Pobierz CV <i className='las la-arrow-down'></i></a>
+              <div className='about__button-container'>
+                <a 
+                  href={cv}
+                  target='_blank' 
+                  rel='noreferrer' 
+                  className='about__button btn'
+                >
+                  Pobierz CV <i className='las la-arrow-down'/>
+                </a>
+              </div>
             </div>
           </div>
         </div>

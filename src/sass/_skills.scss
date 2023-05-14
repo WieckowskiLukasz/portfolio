@@ -8,8 +8,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		gap: 20px;
+		margin-bottom: 80px;
 		@include breakpointMin(lg){
-			justify-content: space-between;
+			justify-content: center;
+			gap: 35px;
 			flex-direction: row;
 			flex-wrap: wrap;
 			align-items: stretch
@@ -22,13 +25,18 @@
 		align-content: center;
 		padding: 20px;
 		background-color: $element-bgc-color;
-		margin-bottom: 10px;
+
 		width: 100%;
+		
 		@include breakpointMin(lg){
 			max-width: 30%;
 			flex-direction: column;
-			margin-bottom: 30px;
 			min-height: 250px;
+		}
+		@include breakpointMin(xxl){
+			max-width: 30%;
+			flex-direction: column;
+			min-height: 200px;
 		}
 		@include breakpointMax(sm){
 			flex-direction: column;
@@ -52,12 +60,18 @@
 		}
 	}
 	&__skill-icon{
-		min-width: 40px;
+		width: 40px;
 		margin-right: 20px;
 		font-size: 2.5rem;
 		&.icon{
 			display: block;
 			font-size: 1.9rem;
+		}
+		&.icon-clickup-seeklogocom{
+			margin-left: -15px;
+		}
+		&.icon-mysql{
+			font-size: 2.6rem;
 		}
 	}
 	&__skill-name{

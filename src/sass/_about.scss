@@ -5,7 +5,7 @@
 		@include content-header;
 		width: 45%;
 		@include breakpointMin(2000px){
-			width: 35%;
+			width: 40%;
 		}
 		@include breakpointMax(xl){
 			width: 55%;
@@ -68,7 +68,7 @@
 			}
 		}
 	}
-	&__photo{
+	/* &__photo{
 		display: flex;
 		flex-direction: column;
 		@include breakpointMax(sm){
@@ -79,6 +79,33 @@
 		img{
 			border-radius: 50%;
 			border: solid 2px rgb(94, 139, 207);
+			padding: 5px;
+			width: 230px;
+			filter: brightness(100%);
+			@include breakpointMax(sm){
+				width: 180px;
+				margin-bottom: 20px;
+			}
+			@include breakpointMax(xxs){
+				width: 135px;
+				margin-bottom: 20px;
+			}
+			@include breakpointMax(xxxs){
+				width: 110px;
+			}
+		}
+	} */
+	&__photo{
+		display: flex;
+		flex-direction: column;
+		@include breakpointMax(sm){
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		img{
+			border-radius: 8px;
+			/* border: dotted 2px rgb(94, 139, 207); */
 			padding: 5px;
 			width: 230px;
 			filter: brightness(100%);
@@ -125,7 +152,14 @@
 		@include breakpointMax(xxs){
 			margin: 0 4px;
 		}
-		
+	}
+	&__button-container{
+		display: flex;
+		width: 100%;
+		justify-content: flex-end;
+		@include breakpointMax(xs){
+			justify-content: center;
+		}
 	}
 	&__button{
 		display: block;
