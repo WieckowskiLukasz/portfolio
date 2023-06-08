@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import background from '../images/backgrounds/default_bg.webp';
 import SkillItem from '../components/SkillItem.tsx';
-import { SkillsArray, BasicKnowledgeArray } from '../arrays/skills.ts';
+import { SkillsContent, BasicKnowledgeContent } from '../arrays/skills.ts';
+import { AppContext } from '../AppContext.tsx';
 
 export default function Skills() {
+	const {lang} = useContext(AppContext);
+
   return (
     <>
 			<div className='content'>
@@ -17,7 +20,7 @@ export default function Skills() {
 				<div className='skills-info'>
 					<div className='skills-info__header'>Umiejętności</div>
 					<div className='skills-info__skills-container'>
-						{ SkillsArray.map(item=> 
+						{ SkillsContent[lang].map(item=> 
 							<SkillItem 
 								title={item.title} 
 								description={item.description} 
@@ -27,7 +30,7 @@ export default function Skills() {
 					</div>
 					<div className='skills-info__header'>Znajomość podstaw</div>
 					<div className='skills-info__skills-container'>
-						{ BasicKnowledgeArray.map(item=> 
+						{ BasicKnowledgeContent[lang].map(item=> 
 							<SkillItem 
 								title={item.title} 
 								description={item.description} 

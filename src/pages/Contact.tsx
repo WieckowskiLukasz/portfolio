@@ -45,41 +45,54 @@ export default function Contact(){
     let form;
     if (formRef.current !== null) form = formRef.current;
     
-  emailjs.sendForm('service_jqq82i6', 'template_p5k3mkn', form, 'CL2Yl5rY5WmzgXZiK')
-    .then((result) => {
-      setTitle('');
-      setEmail('');
-      setMessage('');
-      setTitleValid(false);
-      setEmailValid(false);
-      setMessageValid(false);
-      setFormConfirmed(false);
-      setPopUpActive(true);
-      setSuccessfulSend(true);
-    }, (error) => {
-      console.log(error.text);
-      setPopUpActive(true);
-      setSuccessfulSend(false);
-    });
+    emailjs.sendForm('service_jqq82i6', 'template_p5k3mkn', form, 'CL2Yl5rY5WmzgXZiK')
+      .then((result) => {
+        setTitle('');
+        setEmail('');
+        setMessage('');
+        setTitleValid(false);
+        setEmailValid(false);
+        setMessageValid(false);
+        setFormConfirmed(false);
+        setPopUpActive(true);
+        setSuccessfulSend(true);
+      }, (error) => {
+        setPopUpActive(true);
+        setSuccessfulSend(false);
+      },
+    );
   };
 
   const PopUpInfo = () =>{
-    const successfulSendText = <><p>Twoja wiadomości została wysłana.</p><p>Dziękujemy za kontakt!</p></>;
-    const errorSendText = <><p>Niestety nie udało się wysłać wiadomości.</p><p>Zapraszamy w innym terminie</p></>;
+    const successfulSendText = 
+      <>
+        <p>Twoja wiadomości została wysłana.</p>
+        <p>Dziękujemy za kontakt!</p>
+      </>;
+    const errorSendText = 
+      <>
+        <p>Niestety nie udało się wysłać wiadomości.</p>
+        <p>Zapraszamy w innym terminie</p>
+      </>;
 
-  const textValue = successfulSend ? 
+    const textValue = successfulSend ? 
     successfulSendText
     : errorSendText;
 
-  return(
-    <div className='contact-pop-up'>
-      <div className='contact-pop-up__content'>
-        <div className='contact-pop-up__text'>
-        {textValue}
+    return(
+      <div className='contact-pop-up'>
+        <div className='contact-pop-up__content'>
+          <div className='contact-pop-up__text'>
+          {textValue}
+          </div>
+          <button 
+            onClick={()=> handlePopUpButton()} 
+            className='contact-pop-up__button btn'
+          >
+            OK
+          </button>
         </div>
-        <button onClick={()=> handlePopUpButton()} className='contact-pop-up__button btn'>OK</button>
       </div>
-    </div>
     );
   };
 
@@ -116,9 +129,6 @@ export default function Contact(){
   const messageError = (formConfirmed && !messageValid) ? 
     '- treść wiadomości musi zawierać od 5 do 1500 znaków!'
     : null;
-  const popUpWindow = popUpActive ?
-    <PopUpInfo/>
-    : null;
 
   return (
     <div className='content'>
@@ -129,7 +139,9 @@ export default function Contact(){
           filter: `brightness(40%)`,
         }}>
 			</div>
-      {popUpWindow}
+      { popUpActive &&
+        <PopUpInfo/>
+      }
       <div className='contact'>
         <div className='contact__header'>Kontakt</div>
         <div className='contact__info-container'>
