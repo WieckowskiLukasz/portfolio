@@ -1,8 +1,11 @@
 
-import React, { useRef, useState, SyntheticEvent } from 'react';
+import React, { useRef, useState, SyntheticEvent, useContext } from 'react';
 import emailjs from '@emailjs/browser';
 import background from '../images/backgrounds/default_bg.webp';
 import validator from 'validator';
+import { AppContext } from '../AppContext.tsx';
+import { ContactContent } from '../arrays/contact.ts';
+import ContactPopUp from '../components/ContactPopUp.tsx';
 
 export default function Contact(){
   const [title, setTitle] = useState<string>();
@@ -14,6 +17,9 @@ export default function Contact(){
   const [formConfirmed, setFormConfirmed] = useState<boolean>(false);
   const [successfulSend, setSuccessfulSend] = useState<boolean>();
   const [popUpActive, setPopUpActive] = useState<boolean>(false);
+  const {lang} = useContext(AppContext);
+
+  const Content = ContactContent[lang];
 
   const formRef = useRef<HTMLFormElement | null>(null);
 
@@ -39,7 +45,7 @@ export default function Contact(){
   };
   const handlePopUpButton = () =>{
     setPopUpActive(false);
-  }
+  };
 
   const sendEmail = () => {
     let form;
@@ -60,39 +66,6 @@ export default function Contact(){
         setPopUpActive(true);
         setSuccessfulSend(false);
       },
-    );
-  };
-
-  const PopUpInfo = () =>{
-    const successfulSendText = 
-      <>
-        <p>Twoja wiadomości została wysłana.</p>
-        <p>Dziękujemy za kontakt!</p>
-      </>;
-    const errorSendText = 
-      <>
-        <p>Niestety nie udało się wysłać wiadomości.</p>
-        <p>Zapraszamy w innym terminie</p>
-      </>;
-
-    const textValue = successfulSend ? 
-    successfulSendText
-    : errorSendText;
-
-    return(
-      <div className='contact-pop-up'>
-        <div className='contact-pop-up__content'>
-          <div className='contact-pop-up__text'>
-          {textValue}
-          </div>
-          <button 
-            onClick={()=> handlePopUpButton()} 
-            className='contact-pop-up__button btn'
-          >
-            OK
-          </button>
-        </div>
-      </div>
     );
   };
 
@@ -121,13 +94,13 @@ export default function Contact(){
       'contact__form-input contact__form-input--validated'
       :'contact__form-input';
   const titleError = (formConfirmed && !titleValid) ? 
-    '- tytuł musi zawierać od 5 do 250 znaków!'
+    Content.contactForm.titleInput.error
     : null;
   const emailError = (formConfirmed && !emailValid) ? 
-    ' - podany adres jest niepoprawny!'
+    Content.contactForm.emailInput.error
     : null;
   const messageError = (formConfirmed && !messageValid) ? 
-    '- treść wiadomości musi zawierać od 5 do 1500 znaków!'
+    Content.contactForm.messageInput.error
     : null;
 
   return (
@@ -140,61 +113,62 @@ export default function Contact(){
         }}>
 			</div>
       { popUpActive &&
-        <PopUpInfo/>
+        <ContactPopUp 
+          successfulSend={successfulSend as boolean}
+          successfulSendText={Content.contactForm.successfulSend}
+          errorSendText={Content.contactForm.erroSend}
+          callback={handlePopUpButton}
+        />
       }
       <div className='contact'>
-        <div className='contact__header'>Kontakt</div>
+        <div className='contact__header'>{Content.contact.header}</div>
         <div className='contact__info-container'>
           <div className='contact__info'>
-            <a 
-              className='link'
-              href='https://www.linkedin.com/in/WieckowskiLukasz' 
-              target='_blank' 
-              rel='noreferrer'
-            >
-              <i className="lab la-linkedin-in"></i>
-              linkedin.com/in/WieckowskiLukasz
-            </a>
-            <a className='link' href='mailto:lukasz.wieckowski.inf@gmail.com'>
-              <i className="las la-at"></i>lukasz.wieckowski.inf@gmail.com
-            </a>
-            <a className='link' href="tel:+48515581719">
-              <i className="las la-phone"></i>515-581-719
-            </a>
+            { Content.contact.links.map((item, i)=>
+              <a 
+                className='link'
+                href={item.link}
+                target='_blank'
+                rel='noreferrer'
+              >
+                <i className={item.icon}/>
+                {item.title}
+              </a>
+            )}
           </div>
         </div>
-        <div className='contact__header'>Formularz kontaktowy</div>
+        <div className='contact__header'>{Content.contactForm.header}</div>
         <div className='contact__form-container'>
           <form className='contact__form' noValidate ref={formRef} onSubmit={handleForm}>
             <label className={titleLabel}>
-              Tytuł {titleError}
+              {Content.contactForm.titleInput.title} {titleError}
             </label>
             <input
               className={titleInput}
               type='text' 
               name='user_name' 
-              placeholder='Wprowadź tyłuł...' 
+              placeholder={Content.contactForm.titleInput.placeholder}
               value={title} 
               onChange={handleTitle}
             />
             <label className={emailLabel}>
-              Email {emailError}
+              {Content.contactForm.emailInput.title} {emailError}
             </label>
             <input 
               className={emailInput}
               type='email' 
               name='user_email'
-              placeholder='Wprowadź adres email...'
+              placeholder={Content.contactForm.emailInput.placeholder}
               value={email} 
               onChange={handleEmail}
             />
             <label className={messageLabel}>
-              Wiadomość {messageError}
+              {Content.contactForm.messageInput.title} {messageError}
             </label>
             <textarea
               className={messageInput}
               name='message' 
-              placeholder='Wprowadź treść wiadomości...' 
+              placeholder={Content.contactForm.messageInput.placeholder}
               value={message} 
               onChange={handleMessage}
             />
@@ -202,7 +176,7 @@ export default function Contact(){
               className='contact__form-submit btn' 
               type='submit' 
             >
-              Wyślij
+              {Content.contactForm.sendButton}
               <i className="las la-paper-plane"></i></button>
           </form>
         </div>

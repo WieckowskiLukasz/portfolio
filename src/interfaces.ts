@@ -1,12 +1,13 @@
 export interface SkillItemInterface{
-  title: string;
-  description: string;
-  icon: string;
+  title: string,
+  description: string,
+  icon: string,
 };
 
 export interface SocialMediaItemInterface{
-  link: string;
-  icon: string;
+  link: string,
+  icon?: string,
+  title?: string,
 };
 
 export interface ProjectItemInterface{
@@ -23,6 +24,11 @@ export interface ProjectItemInterface{
   }>,
 };
 
+export interface ProjectsContentInterface{
+  header: string,
+  projectsArray: Array<ProjectItemInterface>,
+}
+
 export interface AboutMeInterface{
   header: string,
   image: string,
@@ -31,4 +37,44 @@ export interface AboutMeInterface{
   description: Array<string>,
   cvFile: string,
   cvButton: string, 
+};
+
+export interface ContactContentInterface{
+  contact:{
+    header: string,
+    links: Array<{
+      title: string,
+      link: string,
+      icon: string,
+    }>,
+  },
+  contactForm:{
+    header: string,
+    titleInput: {
+      title: string,
+      placeholder: string,
+      error: string,
+    },
+    emailInput: {
+      title: string,
+      placeholder: string,
+      error: string,
+    },
+    messageInput: {
+      title: string,
+      placeholder: string,
+      error: string,
+    },
+    sendButton: string,
+    successfulSend: Array<string>,
+    erroSend: Array<string>,
+  },
+};
+
+export interface HomePageContentInterface{
+  name: string,
+  surname: string,
+  viewMore: string,
+  description: string,
+  socialMediaArray: Array<SocialMediaItemInterface>,
 };

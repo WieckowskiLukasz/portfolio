@@ -41,9 +41,7 @@ export default function About() {
             </div>
             <div className='about__info'>
               { content.description.map(item=>
-                <p>
-                  {item}
-                </p>
+                <p dangerouslySetInnerHTML={{__html: item}}/>
               )}
               <div className='about__button-container'>
                 <a 

@@ -21,7 +21,7 @@ export default function Projects() {
           Projekty
         </div>
         <div className='projects__container'>
-          { ProjectsContent[lang].map(item=>
+          { ProjectsContent[lang].projectsArray.map(item=>
             <ProjectItem
               key={item.title} 
               title={item.title} 

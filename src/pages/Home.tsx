@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import home from '../images/backgrounds/home.webp';
 import photography from '../images/photography/home.jpg';
 import photography2 from '../images/photography/4.jpg';
 import cv from '../download/Łukasz_Więckowski_CV.pdf';
+import { HomePageContent } from '../arrays/home.ts';
+import { AppContext } from '../AppContext.tsx';
 
 export default function Home() {
+	const {lang} = useContext(AppContext);
+	const Content = HomePageContent[lang];
+
   return (
     <>
 			<div className='content'>
@@ -20,19 +25,22 @@ export default function Home() {
 					<div className='home-info__content'>
 						<div className='home-info__name-container'>
 							<div className='home-info__picture'><img alt='photography' src={photography}/></div>
-							<div className='home-info__name'><p>Łukasz</p><p>Więckowski</p></div>
+							<div className='home-info__name'>
+								<p>{Content.name}</p>
+								<p>{Content.surname}</p>
+							</div>
 						</div>
 						<div className='home-info__about-me'>
-							Jestem Front-end Developerem i specjalizuję się w budowaniu nowoczesnych aplikacji internetowych korzystając z React, Next.js oraz TypeScript.
+							{Content.description}
 						</div>
 						<div className='home-info__more-info'>
 							<div className='home-info__btn-more-info'>
 								<NavLink to='/o-mnie'>
-									Więcej o mnie<i className='las la-angle-double-right'></i>
+									{Content.viewMore}<i className='las la-angle-double-right'></i>
 								</NavLink>
 							</div>
 							<div className='home-info__media-links-container'>
-								<a 
+								{/* <a 
 									href='https://www.linkedin.com/in/WieckowskiLukasz' 
 									target='_blank' 
 									rel='noreferrer' 
@@ -58,9 +66,19 @@ export default function Home() {
 									target='_blank' 
 									rel='noreferrer' 
 									className='home-info__media-link cv'
-									>
+								>
 										CV
-								</a>
+								</a> */}
+								{ Content.socialMediaArray.map((item, i)=>
+									<a 
+										href='https://www.linkedin.com/in/WieckowskiLukasz' 
+										target='_blank' 
+										rel='noreferrer' 
+										className='home-info__media-link'>
+											<i className={item.icon}></i>
+											{item.title}
+									</a>
+								)}
 							</div>
 						</div>
 					</div>
