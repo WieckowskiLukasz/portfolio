@@ -30,8 +30,8 @@ export const HomePageContent: {pl: HomePageContentInterface, en: HomePageContent
   en: {
     name: 'Łukasz',
     surname: 'Więckowski',
-    viewMore: 'Więcej o mnie',
-    description: 'Jestem Front-end Developerem i specjalizuję się w budowaniu nowoczesnych aplikacji internetowych korzystając z React, Next.js oraz TypeScript.',
+    viewMore: 'More about me',
+    description: 'I am a Front-end Developer, specializing in creating modern web applications using React, Next.js, and TypeScript.',
     socialMediaArray: [
       { 
         link: 'https://www.linkedin.com/in/WieckowskiLukasz' ,

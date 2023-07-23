@@ -71,7 +71,7 @@ export default function Home() {
 								</a> */}
 								{ Content.socialMediaArray.map((item, i)=>
 									<a 
-										href='https://www.linkedin.com/in/WieckowskiLukasz' 
+										href={item.link} 
 										target='_blank' 
 										rel='noreferrer' 
 										className='home-info__media-link'>

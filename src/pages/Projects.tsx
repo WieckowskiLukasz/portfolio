@@ -3,9 +3,11 @@ import background from '../images/backgrounds/default_bg.webp';
 import { AppContext } from '../AppContext.tsx';
 import { ProjectsContent } from '../arrays/projects.ts';
 import ProjectItem from '../components/ProjectItem.tsx';
+import { ProjectsContentInterface } from '../interfaces';
 
 export default function Projects() {
   const {lang} = useContext(AppContext);
+	const content: ProjectsContentInterface = ProjectsContent[lang];
 
   return (
     <div className='content'>
@@ -18,10 +20,10 @@ export default function Projects() {
       </div>
       <div className='projects'>
         <div className='projects__header'>
-          Projekty
+          {content.header}
         </div>
         <div className='projects__container'>
-          { ProjectsContent[lang].projectsArray.map(item=>
+          { content.projectsArray.map(item=>
             <ProjectItem
               key={item.title} 
               title={item.title} 

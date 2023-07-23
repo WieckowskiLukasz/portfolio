@@ -41,12 +41,12 @@ export const ContactContent: {pl: ContactContentInterface, en: ContactContentInt
       },
       sendButton: 'Wyślij',
       successfulSend: ['Twoja wiadomości została wysłana.', 'Dziękujemy za kontakt!'],
-      erroSend: ['Niestety nie udało się wysłać wiadomości.', 'Zapraszamy w innym terminie'],
+      erroSend: ['Niestety nie udało się wysłać wiadomości.', 'Zapraszamy w innym terminie.'],
     }
   },
   en: {
     contact:{
-      header: 'Kontakt',
+      header: 'Contact',
       links: [
         {
           title: 'linkedin.com/in/WieckowskiLukasz',
@@ -66,25 +66,25 @@ export const ContactContent: {pl: ContactContentInterface, en: ContactContentInt
       ],
     },
     contactForm:{
-      header: 'Formularz kontaktowy',
+      header: 'Contact form',
       titleInput: {
-        title: 'Tytuł',
-        placeholder: 'Wprowadź tytuł...',
-        error: '- tytuł musi zawierać od 5 do 250 znaków!',
+        title: 'Title',
+        placeholder: 'Enter the title...',
+        error: '- the title must be between 5 and 250 characters long!',
       },
       emailInput: {
         title: 'Email',
-        placeholder: 'Wprowadź adres email...',
-        error: '- podany adres jest niepoprawny!',
+        placeholder: 'Enter your email address...',
+        error: '- the provided address is incorrect/invalid!',
       },
       messageInput: {
-        title: 'Wiadomość',
-        placeholder: 'Wprowadź treść wiadomości...',
-        error: '- treść wiadomości musi zawierać od 5 do 1500 znaków!',
+        title: 'Message',
+        placeholder: 'Enter the message content...',
+        error: '- the message content must be between 5 and 1500 characters long!',
       },
-      sendButton: 'Wyślij',
-      successfulSend: ['Twoja wiadomości została wysłana.', 'Dziękujemy za kontakt!'],
-      erroSend: ['Niestety nie udało się wysłać wiadomości.', 'Zapraszamy w innym terminie'],
+      sendButton: 'Send',
+      successfulSend: ['Your message has been sent.', 'Thank you for contacting us!'],
+      erroSend: ['Unfortunately, the message could not be sent.', 'Please try again at another time.'],
     }
   }
 };

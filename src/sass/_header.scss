@@ -150,12 +150,12 @@
     font-size: 1.5rem;
     color: $nav-link-color;
     @include breakpointMax(md) {
-      transform: translate(0, -10px);
+      transform: translate(0, -5px);
       right: 50px;
     }
-    &--scrolled{
+    /* &--scrolled{
       color: $nav-link-scrolled;
-    }
+    } */
     i{
       transition: .3s all;
     }

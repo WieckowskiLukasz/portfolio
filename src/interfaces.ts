@@ -4,6 +4,11 @@ export interface SkillItemInterface{
   icon: string,
 };
 
+export interface SkillsGroupInterface{
+  title: string,
+  skills: Array<SkillItemInterface>,
+};
+
 export interface SocialMediaItemInterface{
   link: string,
   icon?: string,
@@ -27,7 +32,7 @@ export interface ProjectItemInterface{
 export interface ProjectsContentInterface{
   header: string,
   projectsArray: Array<ProjectItemInterface>,
-}
+};
 
 export interface AboutMeInterface{
   header: string,
@@ -69,6 +74,11 @@ export interface ContactContentInterface{
     successfulSend: Array<string>,
     erroSend: Array<string>,
   },
+};
+
+export interface HeaderLinkItemInterface{
+  title: string,
+  link: string,
 };
 
 export interface HomePageContentInterface{

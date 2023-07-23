@@ -1,8 +1,11 @@
-import React, { useEffect, useState, useLayoutEffect} from 'react';
+import React, { useEffect, useState, useLayoutEffect, useContext} from 'react';
 import { NavLink } from 'react-router-dom';
 import logo  from '../images/logo/logo.svg';
 import { useLocation } from 'react-router-dom';
 import Settings from './Settings.tsx';
+import { AppContext } from '../AppContext.tsx';
+import { HeaderLinks } from '../arrays/header.ts';
+import { HeaderLinkItemInterface } from '../interfaces.ts';
 
 const Header = () =>{
   const [pageScrolled, setPageScrolled] = useState(false);
@@ -10,6 +13,9 @@ const Header = () =>{
   const [settingsActive, setSettingsActive] = useState<boolean>(false);
   const [pageMobile, setpageMobile] = useState(false);
   const location = useLocation();
+
+  const {lang} = useContext(AppContext);
+  const content: Array<HeaderLinkItemInterface> = HeaderLinks[lang];
 
   useLayoutEffect(() => {
     handleWidth();
@@ -61,7 +67,7 @@ const Header = () =>{
         <Settings pageScrolled={pageScrolled}/> 
       }
       <div className='header__content'>
-      <div>
+        <div>
           <NavLink to='/'>
             <img 
               src={logo} 
@@ -72,31 +78,16 @@ const Header = () =>{
         </div>
         <nav className='navigation'>
           <ul className={menuSwitch}>
-            <li 
-              onClick={()=> handleNavLinkClick()} 
-              className={navLink}>
-                <NavLink to='/'>Start</NavLink>
-            </li>
-            <li 
-              onClick={()=> handleNavLinkClick()} 
-              className={navLink}>
-                <NavLink to='/o-mnie'>O mnie</NavLink>
-            </li>
-            <li 
-              onClick={()=> handleNavLinkClick()} 
-              className={navLink}>
-                <NavLink to='/umiejetnosci'>Umiejętności</NavLink>
-            </li>
-            <li 
-              onClick={()=> handleNavLinkClick()} 
-              className={navLink}>
-                <NavLink to='/projekty'>Projekty</NavLink>
-            </li>
-            <li 
-              onClick={()=> handleNavLinkClick()} 
-              className={navLink}>
-                <NavLink to='/kontakt'>Kontakt</NavLink>
-            </li>
+            {content.map(item => 
+              <li 
+                key={item.title}
+                onClick={()=> handleNavLinkClick()} 
+                className={navLink}>
+                  <NavLink to={item.link}>
+                    {item.title}
+                  </NavLink>
+              </li>
+            )}
           </ul>
         </nav>
         <div 

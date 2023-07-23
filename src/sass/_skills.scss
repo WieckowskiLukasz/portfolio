@@ -1,4 +1,5 @@
 .skills-info{
+	width: 700px;
 	@include page-container;
 	&__header{
 		@include content-header;
@@ -6,39 +7,48 @@
 	&__skills-container{
 		@include element-container;
 		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
 		gap: 20px;
 		margin-bottom: 80px;
-		@include breakpointMin(lg){
-			justify-content: center;
-			gap: 35px;
-			flex-direction: row;
-			flex-wrap: wrap;
-			align-items: stretch
+		max-width: 100%;
+		@include breakpointMax(sm){
+			flex-direction: column;
+			padding: 0 16px;
+		}
+		@include breakpointMax(xs){
+			padding: 0;
 		}
 	}
 	&__skill-item{
 		display: flex;
 		justify-content: flex-start;
-		align-items: center;
+		/* align-items: center; */
 		align-content: center;
 		padding: 20px;
 		background-color: $element-bgc-color;
-
-		width: 100%;
-		
-		@include breakpointMin(lg){
-			max-width: 30%;
-			flex-direction: column;
-			min-height: 250px;
-		}
-		@include breakpointMin(xxl){
-			max-width: 30%;
+		width: 30%;
+		flex-direction: column;
+		align-self: stretch;
+		/* @include breakpointMin(xxl){
 			flex-direction: column;
 			min-height: 200px;
 		}
+		@include breakpointMin(lg){
+			min-height: 250px;
+		} */
+
+		@include breakpointMax(md){
+			width: 45%;
+			flex-direction: column;
+		}
 		@include breakpointMax(sm){
+			width: 100%;
+			flex-direction: row;
+		}
+		@include breakpointMax(xs){
+			width: 100%;
 			flex-direction: column;
 		}
 	}
@@ -46,8 +56,10 @@
 		min-height: 40px;
 		align-items: center;
 		display: flex;
-		border-right: $border;
+		/* border-right: $border; */
 		text-shadow: $text-shadow;
+		border-bottom: $border;
+		padding-bottom: 5px;
 		@include breakpointMin(lg){
 			width: 100%;
 			border-right: none;
@@ -56,6 +68,14 @@
 			min-height: 50px;
 		}
 		@include breakpointMax(sm){
+			border-right: $border;
+			border-bottom: none;
+		}
+		@include breakpointMax(sm){
+			border-right: $border;
+			border-bottom: none;
+		}
+		@include breakpointMax(xs){
 			border-right: none;
 		}
 	}
@@ -82,23 +102,31 @@
 	}
 	&__skill-description{
 		padding-bottom: 10px;
-		margin-left: 50px;
+		/* margin-left: 50px; */
 		font-size: 1.2rem;
 		transform: translateY(4px);
-		text-align: justify;
+		text-align: left;
 		text-shadow: $text-shadow;
-		@include breakpointMin(lg){
+		padding-top: 10px;
+		/* @include breakpointMin(lg){
 			font-size: 1.15rem;
 			margin-left: 0;
 			padding-top: 10px;
 			text-align: left;
-		}
+		} */
 		@include breakpointMax(sm){
+			align-self: flex-start;
+			border-top: none;
+			padding: 10px;
+			margin: 0;
+			margin-left: 20px;
+		}
+		@include breakpointMax(xs){
 			align-self: flex-start;
 			border-top: $border;
 			padding: 10px;
-			margin: 0;
 			width: 100%;
+			margin-left: 0;
 		}
 	}
 }

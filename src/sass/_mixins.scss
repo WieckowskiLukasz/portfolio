@@ -1,5 +1,5 @@
 @mixin content-header{
-	width: 50%;
+	width: 1200px;
 	text-transform: uppercase;
 	font-size: 2.5rem;
 	display: flex;
@@ -10,11 +10,12 @@
 	letter-spacing: 4px;
 	font-weight: 500;
 	text-shadow: $text-shadow;
-  @include breakpointMax(xl){
-    width: 60%;
+	padding: 0 32px;
+	@include breakpointMax(lg){
+    width: 100%;
   }
 	@include breakpointMax(md){
-    width: 75%;
+    width: 100%;
   }
   @include breakpointMax(sm){
 		letter-spacing: normal;
@@ -54,14 +55,12 @@
 }
 
 @mixin element-container{
-	padding-left: 20px;
-	width: 50%;
+	padding: 0 32px;
+	width: 1200px;
 	margin-bottom: 40px;
-	@include breakpointMax(xl){
-		width: 60%;
-	}
-	@include breakpointMax(md){
-    width: 75%;
+	max-width: 1200px;
+	@include breakpointMax(lg){
+    width: 100%;
   }
 	@include breakpointMax(sm){
 		padding: 0;

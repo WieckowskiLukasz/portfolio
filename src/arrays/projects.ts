@@ -125,11 +125,11 @@ export const ProjectsContent: {pl: ProjectsContentInterface, en: ProjectsContent
     ],
   },
   en:{
-    header: 'Projekty',
+    header: 'Projects',
     projectsArray: [
       {
         title: 'GZGK w Gozdowie',
-        description: 'Aplikacja internetowa dla Gminnego Zakładu Gospodarki Komunalnej w Gozdowie. Jest to pierwszy komercyjny projekt, został wykonany na początku studiów (01.2020r.), a następnie wykorzystany na potrzeby pracy inżynierskiej. Na potrzeby zakładu wykonany został od podstaw panel admistracyjny w języku PHP.',
+        description: 'An internet application for the Municipal Communal Services Company in Gozdowo. This was my first commercial project, developed at the beginning of my studies (January 2020), and later utilized for my engineering thesis. From scratch, I created an administrative panel in PHP to cater to the needs of the company.',
         websiteTitle: 'gozdowo.info',
         websiteLink: 'http://gozdowo.info/',
         image: gzgk,
@@ -162,7 +162,7 @@ export const ProjectsContent: {pl: ProjectsContentInterface, en: ProjectsContent
       },
       {
         title: 'Weather Forecast',
-        description: 'Aplikacja pogodowa korzystająca z darmowego klucza API OpenWeatherMap. Projekt został wykonany w React. Zastosowano komponenty funkcyjne z hookami, React Context i React Router. Za oprawę graficzną odpowiada Saas. Aplikacja została uruchomiona na GitHub Pages.',
+        description: 'A weather application utilizing a free API key from OpenWeatherMap. The project was developed using React, employing functional components with hooks, React Context, and React Router. Styling was done using Saas. The application has been deployed on GitHub Pages.',
         websiteTitle: 'wieckowskilukasz.github.io/weatherForecast',
         websiteLink: 'https://wieckowskilukasz.github.io/weatherForecast/',
         gitHubTitle: 'github.com/WieckowskiLukasz/weatherForecast',
@@ -189,7 +189,7 @@ export const ProjectsContent: {pl: ProjectsContentInterface, en: ProjectsContent
       },
       {
         title: 'Memory Card Game',
-        description: 'Aplikacja przedstawia wariację na temat popularnej gry "Memory". Gracz musi odnaleźć 12 par kart i ma na to 5 minut. Im mniej czasu mu to zajmie i im mniej ruchów przy tym wykona, tym więcej punktów otrzyma. Projekt został wykonany w React. Zastosowano komponenty funkcyjne z hookami. Za oprawę graficzną odpowiada Saas. Aplikacja została uruchomiona na GitHub Pages.',
+        description:`The application is a variation of the popular game 'Memory'. The player's objective is to find 12 pairs of cards within 5 minutes. The fewer moves and less time the player takes to complete the game, the more points they will earn. The project was developed using React, utilizing functional components with hooks. Styling was done using Saas. The application has been deployed on GitHub Pages.`,
         websiteTitle: 'wieckowskilukasz.github.io/MemoryCardGame',
         websiteLink: 'https://wieckowskilukasz.github.io/MemoryCardGame/',
         gitHubTitle: 'github.com/WieckowskiLukasz/MemoryCardGame',
@@ -216,7 +216,7 @@ export const ProjectsContent: {pl: ProjectsContentInterface, en: ProjectsContent
       },
       {
         title: 'Portfolio',
-        description: 'Aplikacja wykonana na potrzeby portfolio. Projekt został wykonany w React. Zastosowano komponenty funkcyjne z hookami i React Router. Za oprawę graficzną odpowiada Saas. Aplikacja została uruchomiona na GitHub Pages.',
+        description: 'The application was created for portfolio purposes. The project was developed using React, employing functional components with hooks and React Router. Styling was done using Saas. The application has been deployed on GitHub Pages.',
         websiteTitle: 'wieckowskilukasz.github.io/portfolio',
         websiteLink: 'https://wieckowskilukasz.github.io/portfolio/',
         gitHubTitle: 'github.com/WieckowskiLukasz/portfolio',

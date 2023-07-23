@@ -20,7 +20,9 @@ export default function About() {
           }}>
         </div>
         <div className='about'>
-          <div className='about__header'>{content.header}</div>
+          <div className='about__header'>
+            {content.header}
+          </div>
           <div className='about__info-container'>
             <div className='about__photo'>
               <img alt='photography' src={content.image}/>
